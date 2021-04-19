@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{8A424946-838D-4A6D-BF47-965A1D43D94B}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{F1F23ABE-4FCD-4D27-AE81-576A87F50103}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,8 +23,12 @@
       DTS:ObjectName="localhost">
       <DTS:ObjectData>
         <SMOServerConnectionManager
-          ConnectionString="SqlServerName=localhost;UseWindowsAuthentication=True;UserName=;"
-          ConnectByProxy="False" />
+          ConnectionString="SqlServerName=10.250.2.14;UseWindowsAuthentication=False;UserName=coke_bi;"
+          ConnectByProxy="False">
+          <PassWord
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2AFfHyfFdkClsy/gj6oXNQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADaeFxfaQiOHRn0QrOT2IDpAAAAAASAAACgAAAAEAAAAAkkO+weIu0aZWQ9zKdbdbAYAAAAZ8Hy6O3VwHF/BKg7uj4bYxplJVy82wXFFAAAAJN/l9b5lIV7/O8NFxR1Egcjzb8x</PassWord>
+        </SMOServerConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -55,7 +59,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.SpaceUsed" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE stt.SpaceUsed" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -72,7 +76,7 @@
         DTS:ObjectName="{12E38CE9-7D88-4DFA-B2EF-0281352369AE}">
         <DTS:ObjectData>
           <FEESMO
-            EnumURN="RuntimeServer[@Connection='{93392838-1377-4FBF-811C-696A4308D4BE}']/Server[@Name='localhost']/Database[@Name='budget']/SMOEnumObj[@Name='Tables']/SMOEnumType[@Name='Names']" />
+            EnumURN="RuntimeServer[@Connection='{93392838-1377-4FBF-811C-696A4308D4BE}']/Server[@Name='10.250.2.14']/Database[@Name='COKE_BI']/SMOEnumObj[@Name='Tables']/SMOEnumType[@Name='Names']" />
         </DTS:ObjectData>
       </DTS:ForEachEnumerator>
       <DTS:Variables>
@@ -101,7 +105,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-              SQLTask:SqlStatementSource="Declare @fullname varchar(200) = (&#xA;        SELECT '[' + SCHEMA_NAME(schema_id) + '].[' + name + ']'&#xA;        FROM sys.tables&#xA;        where name = ?&#xA;    )&#xA;    /* This populates the SpaceUsed table based on the results of the sp_spaceused stored procedure */&#xA;Insert SpaceUsed EXEC sp_spaceused @fullname&#xA;    /* This part of the code will return the total number of records inserted so that the SQL Task can further process it */&#xA;Select Count(*) as TotalRowCount"
+              SQLTask:SqlStatementSource="Declare @fullname varchar(200) = (&#xA;        SELECT '[' + SCHEMA_NAME(schema_id) + '].[' + name + ']'&#xA;        FROM sys.tables&#xA;        where name = ?&#xA;    )&#xA;    /* This populates the SpaceUsed table based on the results of the sp_spaceused stored procedure */&#xA;Insert stt.SpaceUsed EXEC sp_spaceused @fullname&#xA;    /* This part of the code will return the total number of records inserted so that the SQL Task can further process it */&#xA;Select Count(*) as TotalRowCount"
               SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ResultBinding
                 SQLTask:ResultName="TotalRowCount"
@@ -119,8 +123,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{07D248B1-E2D2-4C76-BDBB-FA480B6B6022}"
-          DTS:ObjectName="{07D248B1-E2D2-4C76-BDBB-FA480B6B6022}"
+          DTS:DTSID="{86A72BAF-1739-41D3-975E-8E3B5478FA5A}"
+          DTS:ObjectName="{86A72BAF-1739-41D3-975E-8E3B5478FA5A}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::TableName" />
       </DTS:ForEachVariableMappings>
@@ -150,6 +154,10 @@
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="191.428574688581,29.0588239369508" />
+        <NodeLayout
+          Size="162.4,41.6"
           Id="Package\Generate SpaceUsed Report\Execute SQL Task"
           TopLeft="54.9142890472803,29.6352962947634" />
         <ContainerLayout
@@ -159,10 +167,6 @@
           Size="275.2,171.2"
           Id="Package\Generate SpaceUsed Report"
           TopLeft="169.285716146839,99.0000005469603" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Execute SQL Task"
-          TopLeft="191.428574688581,29.0588239369508" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="272.628574688581,70.6588239369508">

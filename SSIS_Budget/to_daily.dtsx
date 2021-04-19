@@ -1,0 +1,236 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/19/2021 2:16:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HQ_61690"
+  DTS:CreatorName="TCCBCE\61690"
+  DTS:DTSID="{F8FBF48F-80DD-4B09-BD73-33575FF445C0}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.157"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{81E2BCC3-A8EE-4A49-8F0C-9CE6F44802AA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A97371E2-09DF-487E-9488-A7C94E4D25FA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="period">
+      <DTS:VariableValue
+        DTS:DataType="8">1.2021</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{f739b4bc-def7-416b-a818-f9b7a595c6a6}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachItemEnumerator"
+        DTS:DTSID="{36a397d6-eed4-455a-b6e8-011a1ecf3b37}"
+        DTS:ObjectName="{D2BDC83F-CAEB-4192-8289-F80E2D0E8B89}">
+        <DTS:ObjectData>
+          <FEIEItems>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="1.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="2.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="3.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="4.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="5.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="6.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="7.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="8.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="9.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="10.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="11.2021" />
+            </FEIEItem>
+            <FEIEItem>
+              <FEIEItemValue
+                Type="8"
+                Value="12.2021" />
+            </FEIEItem>
+          </FEIEItems>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Insert"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1c49d9d3-22a3-4013-a862-5bd28bcca49d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+              SQLTask:SqlStatementSource="INSERT INTO bud.bpre_daily&#xA;select t.[Period_Year],&#xA;    t.[Company Code],&#xA;    t.[Cost Element],&#xA;    ROUND(&#xA;        CAST (t.[Value in Obj. Crcy] * d.[Daily_Seasonality] AS FLOAT),&#xA;        2&#xA;    ) AS [Value in Obj. Crcy],&#xA;    ROUND(&#xA;        CAST (t.[Total Quantity] * d.[Daily_Seasonality] AS FLOAT),&#xA;        3&#xA;    ) AS [Total Quantity],&#xA;    t.[Product],&#xA;    t.[Sales District],&#xA;    t.[Route],&#xA;    t.[Region],&#xA;    t.[Plant],&#xA;    t.[Sales office],&#xA;    t.[Distribution Channel],&#xA;    t.[Customer],&#xA;    t.[Sales Group],&#xA;    t.[BP|RE],&#xA;    d.[Date]&#xA;FROM bud.bpre AS t&#xA;    JOIN dim.DAILY_SEASONALITY AS d ON t.[Period_Year] = d.[Period_Year]&#xA;        AND t.[Sales Group] = d.[Sales Group]&#xA;WHERE&#xA;        t.[Period_Year] = ? &#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::period"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{FEE644D0-371B-4E56-87EF-DE38E07B07A0}"
+          DTS:ObjectName="{FEE644D0-371B-4E56-87EF-DE38E07B07A0}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::period" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate bpre"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{a09e0b39-83cd-4f5b-86da-b432e7e022a7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate bpre"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE bud.bpre_daily" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{091a4ee8-4aff-4b39-a488-454666a4b099}"
+      DTS:From="Package\Truncate bpre"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Loop Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Foreach Loop Container\Insert"
+          TopLeft="47.0142887918319,16.6475968695244" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="212.8,113.6"
+          Size="214.4,156.8"
+          Id="Package\Foreach Loop Container"
+          TopLeft="270.714289302728,63.0588235723106" />
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\Truncate bpre"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="204.8,80.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.914289302728,60.6588235723106"
+              Start="0,0"
+              End="58.414289302728,60.6588235723106">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.957144651364,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.957144651364,0"
+                    Point2="32.957144651364,0"
+                    Point3="32.957144651364,4" />
+                  <mssgle:LineSegment
+                    End="32.957144651364,56.6588235723106" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.957144651364,56.6588235723106"
+                    Point2="32.957144651364,60.6588235723106"
+                    Point3="36.957144651364,60.6588235723106" />
+                  <mssgle:LineSegment
+                    End="58.414289302728,60.6588235723106" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
