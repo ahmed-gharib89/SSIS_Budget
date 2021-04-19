@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS_Budget", "SSIS_Budget\SSIS_Budget.dtproj", "{C5F34205-EDF6-42F6-8B71-B627EB965292}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F34205-EDF6-42F6-8B71-B627EB965292}.Development|Default.ActiveCfg = Development
+		{C5F34205-EDF6-42F6-8B71-B627EB965292}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53EAE1FD-B75B-4A76-B7C0-E26ABC1EB9B2}
+	EndGlobalSection
+EndGlobal
