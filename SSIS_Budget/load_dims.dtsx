@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{973672F7-BAC8-460F-846B-E3664CAFD3DB}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{BA499ECE-0176-40D8-B9B2-2723A4E6A625}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Excel Conversion Rate">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_CONVERSION_RATE.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_CONVERSION_RATE.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -43,7 +43,7 @@
       DTS:ObjectName="Excel DIM_CUSTOMER">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_CUSTOMER.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_CUSTOMER.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -53,7 +53,7 @@
       DTS:ObjectName="Excel DIM_PRODUCTS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_PRODUCTS.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_PRODUCTS.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -63,7 +63,7 @@
       DTS:ObjectName="Excel DIM_ROUTES_NAME">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_ROUTES_NAME.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_ROUTES_NAME.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -73,7 +73,7 @@
       DTS:ObjectName="Excel DIM_SALES_GROUP">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_SALES_GROUP.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_SALES_GROUP.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -83,7 +83,7 @@
       DTS:ObjectName="Excel DIM_SALES_OFFICE">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_SALES_OFFICE.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_SALES_OFFICE.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -93,7 +93,7 @@
       DTS:ObjectName="Excel DIM_SKUS">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_SKUS.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_SKUS.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -103,7 +103,7 @@
       DTS:ObjectName="Excel WEEKLY_SEASONALITY">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\WEEKLY_SEASONALITY.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\WEEKLY_SEASONALITY.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -113,7 +113,7 @@
       DTS:ObjectName="Excel \DIM_SKU_PRICE">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_SKU_PRICE.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Gharib\Visual Studio Projects\Budget\Move_to_DB\DIM_SKU_PRICE.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -2224,7 +2224,7 @@
       DTS:refId="Package\DIM_ROUTES_NAME"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{1aff5e56-93d3-407d-a109-a17dc3cfea06}"
+      DTS:DTSID="{0CF2AF5A-82F0-4DBF-BF65-10207B93658D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="DIM_ROUTES_NAME"
@@ -2365,16 +2365,6 @@
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].Columns[Route]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].ExternalColumns[Route]"
-                      length="255"
-                      lineageId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].Columns[Route]"
-                      name="Route"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].Columns[Route Code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -2384,19 +2374,29 @@
                       lineageId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].Columns[Route Code]"
                       name="Route Code"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].Columns[Route]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].ExternalColumns[Route]"
+                      length="255"
+                      lineageId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].Columns[Route]"
+                      name="Route"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].ExternalColumns[Route]"
-                      dataType="wstr"
-                      length="255"
-                      name="Route" />
                     <externalMetadataColumn
                       refId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].ExternalColumns[Route Code]"
                       dataType="wstr"
                       length="255"
                       name="Route Code" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].ExternalColumns[Route]"
+                      dataType="wstr"
+                      length="255"
+                      name="Route" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2506,19 +2506,19 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DIM_ROUTES_NAME\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Route Code]"
-                      cachedCodepage="1252"
-                      cachedDataType="text"
-                      cachedName="Copy of Route Code"
-                      externalMetadataColumnId="Package\DIM_ROUTES_NAME\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Route Code]"
-                      lineageId="Package\DIM_ROUTES_NAME\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Route Code]" />
-                    <inputColumn
                       refId="Package\DIM_ROUTES_NAME\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Route]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Route"
                       externalMetadataColumnId="Package\DIM_ROUTES_NAME\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Route]"
                       lineageId="Package\DIM_ROUTES_NAME\Excel Source.Outputs[Excel Source Output].Columns[Route]" />
+                    <inputColumn
+                      refId="Package\DIM_ROUTES_NAME\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Route Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Copy of Route Code"
+                      externalMetadataColumnId="Package\DIM_ROUTES_NAME\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Route Code]"
+                      lineageId="Package\DIM_ROUTES_NAME\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Route Code]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4634,6 +4634,176 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Truncate Daily_Seasonality"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{10A7E39C-E247-4E53-AFA7-451E7F74FF22}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Daily_Seasonality"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.Daily_Seasonality" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DIM_CONVERSION_RATE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{04cd8b63-a0ac-4200-b061-f86d6c3079dd}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DIM_CONVERSION_RATE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_CONVERSION_RATE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DIM_CUSTOMER"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{649ae111-4cf6-4ded-a496-ec9c21c9109b}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DIM_CUSTOMER"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_CUSTOMER" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DIM_PRODUCTS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9fe79c7d-b14c-4515-b5c9-c468881609c4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DIM_PRODUCTS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_PRODUCTS" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DIM_ROUTES_NAME"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9ce15c82-6389-4e12-9a2b-6cb59e7f9e31}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DIM_ROUTES_NAME"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="9">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_ROUTES_NAME" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DIM_SALES_GROUP"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{48739822-28a8-458e-8e79-a9e25202db31}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DIM_SALES_GROUP"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="5">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_SALES_GROUP" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DIM_SALES_OFFICE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{ea42b0e4-839a-410c-8c13-ec064a2b2e26}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DIM_SALES_OFFICE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="6">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_SALES_OFFICE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DIM_SKUS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{dc82b35f-d5a7-4533-b71c-12a8f751f9bc}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DIM_SKUS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="7">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_SKUS" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DIM_SKU_PRICE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{c9a95467-6eb0-48b8-be88-89942bd79195}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DIM_SKU_PRICE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_SKU_PRICE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate WEEKLY_SEASONALITY"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{ee6d0533-853e-421a-b5f7-d7a58bb4810d}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate WEEKLY_SEASONALITY"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="8">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.WEEKLY_SEASONALITY" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\WEEKLY_SEASONALITY"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -5101,6 +5271,88 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F0A243B9-8567-494A-AE15-1F6E0C2D6F19}"
+      DTS:From="Package\Truncate Daily_Seasonality"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Daily_Seasonality" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{2021ECC6-F977-4A30-8E40-DAB905DEC502}"
+      DTS:From="Package\Truncate DIM_CONVERSION_RATE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DIM_CONVERSION_RATE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{83018543-D636-421E-9B32-AAB491255042}"
+      DTS:From="Package\Truncate DIM_CUSTOMER"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DIM_CUSTOMER" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{1956A79C-C180-4DB6-A299-9C9DCE7187B0}"
+      DTS:From="Package\Truncate DIM_ROUTES_NAME"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\DIM_ROUTES_NAME" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{B01FB9E9-3718-49D8-8DBA-21DD4B5CAA2E}"
+      DTS:From="Package\Truncate DIM_SKU_PRICE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\DIM_SKU_PRICE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{D322BCF4-0D46-4E9F-AFDC-A0FC6FEFF38B}"
+      DTS:From="Package\Truncate DIM_PRODUCTS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\DIM_PRODUCTS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{50301271-EDE0-439F-9398-87BD23BE3E70}"
+      DTS:From="Package\Truncate DIM_SKUS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\DIM_SKUS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{818186F8-16D4-409D-9527-21C8B5585E16}"
+      DTS:From="Package\Truncate WEEKLY_SEASONALITY"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\WEEKLY_SEASONALITY" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{17C08E39-BCF3-4127-AC4D-A2C61ECF7166}"
+      DTS:From="Package\Truncate DIM_SALES_OFFICE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\DIM_SALES_OFFICE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{1C224AE7-CD4C-4C46-A823-6C6348BEF812}"
+      DTS:From="Package\Truncate DIM_SALES_GROUP"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\DIM_SALES_GROUP" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -5112,47 +5364,319 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="160,41.6"
           Id="Package\Daily_Seasonality"
-          TopLeft="28.5714290579971,34.4117651884944" />
+          TopLeft="276.914289558177,36" />
         <NodeLayout
-          Size="188.8,41.6"
+          Size="199.2,41.6"
           Id="Package\DIM_CONVERSION_RATE"
-          TopLeft="10.000000170299,103.894117679233" />
+          TopLeft="279.057146737527,91.717646415341" />
         <NodeLayout
           Size="157.6,41.6"
           Id="Package\DIM_CUSTOMER"
-          TopLeft="29.2857147844471,187.905882138447" />
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\DIM_ROUTES_NAME"
-          TopLeft="10.000000170299,289.505882138447" />
+          TopLeft="279.771432463977,156.611763547614" />
         <NodeLayout
           Size="156.8,41.6"
           Id="Package\DIM_PRODUCTS"
-          TopLeft="252.142861436825,47.3294075927931" />
+          TopLeft="758.700012048654,38.2117599012116" />
         <NodeLayout
           Size="173.6,41.6"
           Id="Package\DIM_SALES_GROUP"
-          TopLeft="256.428575795524,124.988231347424" />
+          TopLeft="784.414298200851,287.335292374881" />
         <NodeLayout
           Size="174.4,41.6"
           Id="Package\DIM_SALES_OFFICE"
-          TopLeft="247.857147078125,199.164702975956" />
+          TopLeft="787.628583969876,224.458820472869" />
         <NodeLayout
           Size="157.6,41.6"
           Id="Package\DIM_SKU_PRICE"
-          TopLeft="257.142861521974,275.635292283721" />
+          TopLeft="268.700003704003,278.752938881382" />
         <NodeLayout
           Size="128.8,41.6"
           Id="Package\DIM_SKUS"
-          TopLeft="495.0000084298,40.1411713227267" />
+          TopLeft="775.485726620227,99.8470540081339" />
         <NodeLayout
           Size="190.4,41.6"
           Id="Package\WEEKLY_SEASONALITY"
-          TopLeft="490.714294071101,102.811760448172" />
+          TopLeft="780.485726705377,159.458819561269" />
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\Truncate Daily_Seasonality"
+          TopLeft="6.71428555615091,33.7058823207671" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="212.314285556151,55.6529411603835">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64.6000040020263,0"
+              Start="0,0"
+              End="57.1000040020263,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.1000040020263,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\Truncate DIM_SKU_PRICE"
+          TopLeft="18.14285717935,277.988232988305" />
+        <NodeLayout
+          Size="244,41.6"
+          Id="Package\Truncate DIM_CONVERSION_RATE"
+          TopLeft="12.4285713677504,87.3058808622064" />
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\Truncate DIM_CUSTOMER"
+          TopLeft="18.1428571793498,149.905880315246" />
+        <NodeLayout
+          Size="221.6,41.6"
+          Id="Package\Truncate DIM_ROUTES_NAME"
+          TopLeft="18.1428571793497,209.447056195974" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="256.42857136775,110.311763638774">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22.6285753697767,0"
+              Start="0,0"
+              End="15.1285753697767,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="15.1285753697767,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="220.54285717935,174.05882193143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.2285752846272,0"
+              Start="0,0"
+              End="51.7285752846272,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.7285752846272,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="220.54285717935,299.170585934843">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.1571465246534,0"
+              Start="0,0"
+              End="40.6571465246534,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.6571465246534,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\DIM_ROUTES_NAME"
+          TopLeft="277.142861862572,213.129414338637" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="239.74285717935,232.088235267306">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.4000046832223,0"
+              Start="0,0"
+              End="29.9000046832223,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.9000046832223,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="201.6,41.6"
+          Id="Package\Truncate DIM_PRODUCTS"
+          TopLeft="533.31429075027,34.1882353584659" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Truncate DIM_SKUS"
+          TopLeft="537.428580308447,98.7705859348433" />
+        <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\Truncate WEEKLY_SEASONALITY"
+          TopLeft="538.142866034897,162.899997174039" />
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Truncate DIM_SALES_OFFICE"
+          TopLeft="539.571437487797,225.499996627078" />
+        <NodeLayout
+          Size="218.4,41.6"
+          Id="Package\Truncate DIM_SALES_GROUP"
+          TopLeft="542.428580393597,283.511760721652" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="734.91429075027,56.9999976298388">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.7857212983834,0"
+              Start="0,0"
+              End="16.2857212983834,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="16.2857212983834,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="711.028580308447,120.108819971489">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64.4571463117796,0"
+              Start="0,0"
+              End="56.9571463117796,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.9571463117796,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="655.742866034897,204.499997174038">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="219.942860670479,-3.44117761276982"
+              Start="0,0"
+              End="219.942860670479,4.05882238723018">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="215.942860670479,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="215.942860670479,22.5"
+                    Point2="219.942860670479,22.5"
+                    Point3="219.942860670479,18.5" />
+                  <mssgle:LineSegment
+                    End="219.942860670479,4.05882238723018" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="758.771437487797,245.779408549973">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.8571464820786,0"
+              Start="0,0"
+              End="21.3571464820786,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="21.3571464820786,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="760.828580393597,306.223526548266">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.5857178072544,0"
+              Start="0,0"
+              End="16.0857178072544,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="16.0857178072544,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -5312,15 +5836,15 @@
     design-time-name="Package\DIM_CUSTOMER">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\DIM_CUSTOMER\Excel Source"
-          TopLeft="85.0000014475414,42.8235300123485" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\DIM_CUSTOMER\OLE DB Destination"
           TopLeft="97.1428587971902,143.764707898599" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DIM_CUSTOMER\Excel Source"
+          TopLeft="85.0000014475414,42.8235300123485" />
         <EdgeLayout
           Id="Package\DIM_CUSTOMER.Paths[Excel Source Output]"
           TopLeft="154.200001447541,84.4235300123486">
@@ -5352,7 +5876,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5385,99 +5911,14 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\DIM_ROUTES_NAME">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\DIM_ROUTES_NAME\Excel Source"
-          TopLeft="85.0000014475414,42.8235300123485" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\DIM_ROUTES_NAME\OLE DB Destination"
-          TopLeft="89,251" />
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\DIM_ROUTES_NAME\Data Conversion"
-          TopLeft="94,136" />
-        <EdgeLayout
-          Id="Package\DIM_ROUTES_NAME.Paths[Excel Source Output]"
-          TopLeft="154.200001447541,84.4235300123485">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.3999985524586,51.5764699876515"
-              Start="0,0"
-              End="17.3999985524586,44.0764699876515">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.7882349938258" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.7882349938258"
-                    Point2="0,25.7882349938258"
-                    Point3="4,25.7882349938258" />
-                  <mssgle:LineSegment
-                    End="13.3999985524586,25.7882349938258" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.3999985524586,25.7882349938258"
-                    Point2="17.3999985524586,25.7882349938258"
-                    Point3="17.3999985524586,29.7882349938258" />
-                  <mssgle:LineSegment
-                    End="17.3999985524586,44.0764699876515" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DIM_ROUTES_NAME.Paths[Data Conversion Output]"
-          TopLeft="172.9,177.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,73.4"
-              Start="0,0"
-              End="0,65.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,65.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DIM_ROUTES_NAME\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\DIM_PRODUCTS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DIM_PRODUCTS\Excel Source"
+          TopLeft="106,36" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\DIM_PRODUCTS\OLE DB Destination"
@@ -5486,6 +5927,30 @@
           Size="155.2,41.6"
           Id="Package\DIM_PRODUCTS\Data Conversion"
           TopLeft="96,136" />
+        <EdgeLayout
+          Id="Package\DIM_PRODUCTS.Paths[Excel Source Output]"
+          TopLeft="174.4,77.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.4"
+              Start="0,0"
+              End="0,50.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DIM_PRODUCTS.Paths[Data Conversion Output]"
           TopLeft="173.6,177.6">
@@ -5517,38 +5982,27 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\DIM_PRODUCTS\Excel Source"
-          TopLeft="106,36" />
-        <EdgeLayout
-          Id="Package\DIM_PRODUCTS.Paths[Excel Source Output]"
-          TopLeft="174.4,77.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.4"
-              Start="0,0"
-              End="0,50.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM_PRODUCTS\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DIM_PRODUCTS\OLE DB Destination">
     <Properties>
@@ -5566,15 +6020,15 @@
     design-time-name="Package\DIM_SALES_GROUP">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\DIM_SALES_GROUP\Excel Source"
-          TopLeft="85.0000014475414,42.8235300123485" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\DIM_SALES_GROUP\OLE DB Destination"
           TopLeft="81.1428587971902,253.764707898599" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DIM_SALES_GROUP\Excel Source"
+          TopLeft="85.0000014475414,42.8235300123485" />
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\DIM_SALES_GROUP\Data Conversion"
@@ -5598,7 +6052,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5620,14 +6076,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DIM_SALES_GROUP\Excel Source">
+    design-time-name="Package\DIM_SALES_GROUP\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5640,7 +6098,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DIM_SALES_GROUP\OLE DB Destination">
+    design-time-name="Package\DIM_SALES_GROUP\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5656,15 +6114,15 @@
     design-time-name="Package\DIM_SALES_OFFICE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\DIM_SALES_OFFICE\OLE DB Destination"
-          TopLeft="81.1428587971902,253.764707898599" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\DIM_SALES_OFFICE\Excel Source"
           TopLeft="85.0000014475414,42.8235300123485" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DIM_SALES_OFFICE\OLE DB Destination"
+          TopLeft="81.1428587971902,253.764707898599" />
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\DIM_SALES_OFFICE\Data Conversion"
@@ -5688,7 +6146,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5722,14 +6182,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DIM_SALES_OFFICE\OLE DB Destination">
+    design-time-name="Package\DIM_SALES_OFFICE\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5742,7 +6204,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DIM_SALES_OFFICE\Excel Source">
+    design-time-name="Package\DIM_SALES_OFFICE\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5758,15 +6220,15 @@
     design-time-name="Package\DIM_SKU_PRICE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\DIM_SKU_PRICE\Excel Source"
-          TopLeft="85.0000014475414,42.8235300123485" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\DIM_SKU_PRICE\OLE DB Destination"
           TopLeft="97.1428587971902,143.764707898599" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DIM_SKU_PRICE\Excel Source"
+          TopLeft="85.0000014475414,42.8235300123485" />
         <EdgeLayout
           Id="Package\DIM_SKU_PRICE.Paths[Excel Source Output]"
           TopLeft="154.200001447541,84.4235300123486">
@@ -5798,7 +6260,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5834,15 +6298,15 @@
     design-time-name="Package\DIM_SKUS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\DIM_SKUS\Excel Source"
-          TopLeft="85.0000014475414,42.8235300123485" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\DIM_SKUS\OLE DB Destination"
           TopLeft="97.1428587971902,143.764707898599" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DIM_SKUS\Excel Source"
+          TopLeft="85.0000014475414,42.8235300123485" />
         <EdgeLayout
           Id="Package\DIM_SKUS.Paths[Excel Source Output]"
           TopLeft="154.200001447541,84.4235300123486">
@@ -5874,7 +6338,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5910,15 +6376,15 @@
     design-time-name="Package\WEEKLY_SEASONALITY">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\WEEKLY_SEASONALITY\Excel Source"
-          TopLeft="85.0000014475414,42.8235300123485" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\WEEKLY_SEASONALITY\OLE DB Destination"
           TopLeft="86.1428587971902,247.764707898599" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\WEEKLY_SEASONALITY\Excel Source"
+          TopLeft="85.0000014475414,42.8235300123485" />
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\WEEKLY_SEASONALITY\Data Conversion"
@@ -5954,7 +6420,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5976,25 +6444,14 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\WEEKLY_SEASONALITY\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\WEEKLY_SEASONALITY\OLE DB Destination">
     <Properties>
@@ -6009,7 +6466,96 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DIM_ROUTES_NAME\OLE DB Destination">
+    design-time-name="Package\WEEKLY_SEASONALITY\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DIM_ROUTES_NAME">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DIM_ROUTES_NAME\Excel Source"
+          TopLeft="105,60" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DIM_ROUTES_NAME\OLE DB Destination"
+          TopLeft="110,241" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\DIM_ROUTES_NAME\Data Conversion"
+          TopLeft="112,152" />
+        <EdgeLayout
+          Id="Package\DIM_ROUTES_NAME.Paths[Excel Source Output]"
+          TopLeft="174.2,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.3999999999999,50.4"
+              Start="0,0"
+              End="15.3999999999999,42.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2"
+                    Point2="0,25.2"
+                    Point3="4,25.2" />
+                  <mssgle:LineSegment
+                    End="11.3999999999999,25.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.3999999999999,25.2"
+                    Point2="15.3999999999999,25.2"
+                    Point3="15.3999999999999,29.2" />
+                  <mssgle:LineSegment
+                    End="15.3999999999999,42.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_ROUTES_NAME.Paths[Data Conversion Output]"
+          TopLeft="192.4,193.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.4"
+              Start="0,0"
+              End="0,39.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM_ROUTES_NAME\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6022,7 +6568,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DIM_PRODUCTS\Excel Source">
+    design-time-name="Package\DIM_ROUTES_NAME\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
