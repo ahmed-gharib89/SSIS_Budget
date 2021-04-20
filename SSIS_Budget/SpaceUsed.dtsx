@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{F1F23ABE-4FCD-4D27-AE81-576A87F50103}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{6340DB3A-A70F-4172-85C0-1BF56970B610}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,12 +23,8 @@
       DTS:ObjectName="localhost">
       <DTS:ObjectData>
         <SMOServerConnectionManager
-          ConnectionString="SqlServerName=10.250.2.14;UseWindowsAuthentication=False;UserName=coke_bi;"
-          ConnectByProxy="False">
-          <PassWord
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2AFfHyfFdkClsy/gj6oXNQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADaeFxfaQiOHRn0QrOT2IDpAAAAAASAAACgAAAAEAAAAAkkO+weIu0aZWQ9zKdbdbAYAAAAZ8Hy6O3VwHF/BKg7uj4bYxplJVy82wXFFAAAAJN/l9b5lIV7/O8NFxR1Egcjzb8x</PassWord>
-        </SMOServerConnectionManager>
+          ConnectionString="SqlServerName=localhost;UseWindowsAuthentication=True;UserName=;"
+          ConnectByProxy="False" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -76,7 +72,7 @@
         DTS:ObjectName="{12E38CE9-7D88-4DFA-B2EF-0281352369AE}">
         <DTS:ObjectData>
           <FEESMO
-            EnumURN="RuntimeServer[@Connection='{93392838-1377-4FBF-811C-696A4308D4BE}']/Server[@Name='10.250.2.14']/Database[@Name='COKE_BI']/SMOEnumObj[@Name='Tables']/SMOEnumType[@Name='Names']" />
+            EnumURN="RuntimeServer[@Connection='{93392838-1377-4FBF-811C-696A4308D4BE}']/Server[@Name='localhost']/Database[@Name='COKE_BI']/SMOEnumObj[@Name='Tables']/SMOEnumType[@Name='Names']" />
         </DTS:ObjectData>
       </DTS:ForEachEnumerator>
       <DTS:Variables>
@@ -123,8 +119,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{86A72BAF-1739-41D3-975E-8E3B5478FA5A}"
-          DTS:ObjectName="{86A72BAF-1739-41D3-975E-8E3B5478FA5A}"
+          DTS:DTSID="{99DF0EFD-1279-4FCB-B583-05DDB0406379}"
+          DTS:ObjectName="{99DF0EFD-1279-4FCB-B583-05DDB0406379}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::TableName" />
       </DTS:ForEachVariableMappings>

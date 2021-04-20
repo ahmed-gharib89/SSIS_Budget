@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{BA499ECE-0176-40D8-B9B2-2723A4E6A625}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{96E91B8E-FEEC-4350-A94B-2CA37FEDFBBF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4143,6 +4143,222 @@
                       cachedName="SKU_CODE"
                       externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_CODE]"
                       lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_CODE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_STATUS]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SKU_STATUS"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_STATUS]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_STATUS]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_ORG]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SKU_ORG"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_ORG]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_ORG]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PACK_CODE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PACK_CODE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK_CODE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[PACK_CODE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PACK]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PACK"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[PACK]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PACK_CAT_2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PACK_CAT_2"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK_CAT_2]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[PACK_CAT_2]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_SIZE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SKU_SIZE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_SIZE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_SIZE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_TRANSACTION_LITRES]"
+                      cachedDataType="r8"
+                      cachedName="SKU_TRANSACTION_LITRES"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_TRANSACTION_LITRES]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_TRANSACTION_LITRES]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BEVERAGE_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BEVERAGE_TYPE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BEVERAGE_TYPE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[BEVERAGE_TYPE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_TRANSACTIONS_PER_CASE]"
+                      cachedDataType="r8"
+                      cachedName="SKU_TRANSACTIONS_PER_CASE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_TRANSACTIONS_PER_CASE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_TRANSACTIONS_PER_CASE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_IS_PROMO]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SKU_IS_PROMO"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_IS_PROMO]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_IS_PROMO]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_PROMO_RATE]"
+                      cachedDataType="r8"
+                      cachedName="SKU_PROMO_RATE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_PROMO_RATE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_PROMO_RATE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR_CODE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FLAVOR_CODE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CODE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR_CODE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FLAVOR"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR_CAT]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FLAVOR_CAT"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CAT]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR_CAT]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_BRAND]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SKU_BRAND"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_BRAND]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_BRAND]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NEW_FLAVOR_CAT]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NEW_FLAVOR_CAT"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEW_FLAVOR_CAT]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[NEW_FLAVOR_CAT]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NEW_FLAVOR_CAT_RANK]"
+                      cachedDataType="r8"
+                      cachedName="NEW_FLAVOR_CAT_RANK"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEW_FLAVOR_CAT_RANK]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[NEW_FLAVOR_CAT_RANK]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NEW_FLAVOR_CAT_SUB_1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NEW_FLAVOR_CAT_SUB_1"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEW_FLAVOR_CAT_SUB_1]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[NEW_FLAVOR_CAT_SUB_1]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NEW_FLAVOR_CAT_SUB_1_RANK]"
+                      cachedDataType="r8"
+                      cachedName="NEW_FLAVOR_CAT_SUB_1_RANK"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEW_FLAVOR_CAT_SUB_1_RANK]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[NEW_FLAVOR_CAT_SUB_1_RANK]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR_GROUP]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FLAVOR_GROUP"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_GROUP]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR_GROUP]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR_GROUP2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FLAVOR_GROUP2"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_GROUP2]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR_GROUP2]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SERVING_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SERVING_TYPE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SERVING_TYPE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SERVING_TYPE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR_CAT_SERVING_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FLAVOR_CAT_SERVING_TYPE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CAT_SERVING_TYPE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR_CAT_SERVING_TYPE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_LOOKUP]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SKU_LOOKUP"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_LOOKUP]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_LOOKUP]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR_GROUP3]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FLAVOR_GROUP3"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_GROUP3]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR_GROUP3]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PACK_CAT_1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PACK_CAT_1"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK_CAT_1]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[PACK_CAT_1]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PACK_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PACK_TYPE"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK_TYPE]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[PACK_TYPE]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR_CAT_FOR_CONT]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FLAVOR_CAT_FOR_CONT"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CAT_FOR_CONT]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR_CAT_FOR_CONT]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FLAVOR_CAT_FOR_CONT_RANK]"
+                      cachedDataType="r8"
+                      cachedName="FLAVOR_CAT_FOR_CONT_RANK"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CAT_FOR_CONT_RANK]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[FLAVOR_CAT_FOR_CONT_RANK]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONVERSION_FACTOR]"
+                      cachedDataType="r8"
+                      cachedName="CONVERSION_FACTOR"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONVERSION_FACTOR]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[CONVERSION_FACTOR]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SKU_BRAND_SORT]"
+                      cachedDataType="r8"
+                      cachedName="SKU_BRAND_SORT"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_BRAND_SORT]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[SKU_BRAND_SORT]" />
+                    <inputColumn
+                      refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RGB | NRB]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RGB | NRB"
+                      externalMetadataColumnId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RGB | NRB]"
+                      lineageId="Package\DIM_SKUS\Excel Source.Outputs[Excel Source Output].Columns[RGB | NRB]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4152,33 +4368,27 @@
                       name="SKU_CODE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_STATUS]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="SKU_STATUS" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_ORG]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="SKU_ORG" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK_CODE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PACK_CODE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PACK" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK_CAT_2]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PACK_CAT_2" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_SIZE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="SKU_SIZE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_TRANSACTION_LITRES]"
@@ -4186,8 +4396,7 @@
                       name="SKU_TRANSACTION_LITRES" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BEVERAGE_TYPE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="BEVERAGE_TYPE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_TRANSACTIONS_PER_CASE]"
@@ -4195,8 +4404,7 @@
                       name="SKU_TRANSACTIONS_PER_CASE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_IS_PROMO]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="SKU_IS_PROMO" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_PROMO_RATE]"
@@ -4204,28 +4412,23 @@
                       name="SKU_PROMO_RATE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CODE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="FLAVOR_CODE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="FLAVOR" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CAT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="FLAVOR_CAT" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_BRAND]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="SKU_BRAND" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEW_FLAVOR_CAT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="NEW_FLAVOR_CAT" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEW_FLAVOR_CAT_RANK]"
@@ -4233,8 +4436,7 @@
                       name="NEW_FLAVOR_CAT_RANK" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEW_FLAVOR_CAT_SUB_1]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="NEW_FLAVOR_CAT_SUB_1" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NEW_FLAVOR_CAT_SUB_1_RANK]"
@@ -4242,48 +4444,39 @@
                       name="NEW_FLAVOR_CAT_SUB_1_RANK" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_GROUP]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="FLAVOR_GROUP" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_GROUP2]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="FLAVOR_GROUP2" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SERVING_TYPE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="SERVING_TYPE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CAT_SERVING_TYPE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="FLAVOR_CAT_SERVING_TYPE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU_LOOKUP]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="SKU_LOOKUP" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_GROUP3]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="FLAVOR_GROUP3" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK_CAT_1]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PACK_CAT_1" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PACK_TYPE]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PACK_TYPE" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CAT_FOR_CONT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="FLAVOR_CAT_FOR_CONT" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FLAVOR_CAT_FOR_CONT_RANK]"
@@ -4299,8 +4492,7 @@
                       name="SKU_BRAND_SORT" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RGB | NRB]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="RGB | NRB" />
                   </externalMetadataColumns>
                 </input>
@@ -4676,7 +4868,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_CUSTOMER"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4693,7 +4885,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_PRODUCTS"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4710,7 +4902,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_ROUTES_NAME"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="9">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4778,7 +4970,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_SKU_PRICE"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="8">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4795,7 +4987,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate WEEKLY_SEASONALITY"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="8">
+      DTS:ThreadHint="9">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5382,6 +5574,10 @@
           Id="Package\DIM_PRODUCTS"
           TopLeft="758.700012048654,38.2117599012116" />
         <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\DIM_ROUTES_NAME"
+          TopLeft="277.142861862572,213.129414338637" />
+        <NodeLayout
           Size="173.6,41.6"
           Id="Package\DIM_SALES_GROUP"
           TopLeft="784.414298200851,287.335292374881" />
@@ -5398,13 +5594,49 @@
           Id="Package\DIM_SKUS"
           TopLeft="775.485726620227,99.8470540081339" />
         <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\WEEKLY_SEASONALITY"
-          TopLeft="780.485726705377,159.458819561269" />
-        <NodeLayout
           Size="205.6,41.6"
           Id="Package\Truncate Daily_Seasonality"
           TopLeft="6.71428555615091,33.7058823207671" />
+        <NodeLayout
+          Size="244,41.6"
+          Id="Package\Truncate DIM_CONVERSION_RATE"
+          TopLeft="12.4285713677504,87.3058808622064" />
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\Truncate DIM_CUSTOMER"
+          TopLeft="18.1428571793498,149.905880315246" />
+        <NodeLayout
+          Size="201.6,41.6"
+          Id="Package\Truncate DIM_PRODUCTS"
+          TopLeft="533.31429075027,34.1882353584659" />
+        <NodeLayout
+          Size="221.6,41.6"
+          Id="Package\Truncate DIM_ROUTES_NAME"
+          TopLeft="18.1428571793497,209.447056195974" />
+        <NodeLayout
+          Size="218.4,41.6"
+          Id="Package\Truncate DIM_SALES_GROUP"
+          TopLeft="542.428580393597,283.511760721652" />
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Truncate DIM_SALES_OFFICE"
+          TopLeft="539.571437487797,225.499996627078" />
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\Truncate DIM_SKU_PRICE"
+          TopLeft="18.14285717935,277.988232988305" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Truncate DIM_SKUS"
+          TopLeft="537.428580308447,98.7705859348433" />
+        <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\Truncate WEEKLY_SEASONALITY"
+          TopLeft="538.142866034897,162.899997174039" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\WEEKLY_SEASONALITY"
+          TopLeft="780.485726705377,159.458819561269" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="212.314285556151,55.6529411603835">
@@ -5427,22 +5659,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="202.4,41.6"
-          Id="Package\Truncate DIM_SKU_PRICE"
-          TopLeft="18.14285717935,277.988232988305" />
-        <NodeLayout
-          Size="244,41.6"
-          Id="Package\Truncate DIM_CONVERSION_RATE"
-          TopLeft="12.4285713677504,87.3058808622064" />
-        <NodeLayout
-          Size="202.4,41.6"
-          Id="Package\Truncate DIM_CUSTOMER"
-          TopLeft="18.1428571793498,149.905880315246" />
-        <NodeLayout
-          Size="221.6,41.6"
-          Id="Package\Truncate DIM_ROUTES_NAME"
-          TopLeft="18.1428571793497,209.447056195974" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="256.42857136775,110.311763638774">
@@ -5488,32 +5704,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="220.54285717935,299.170585934843">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="48.1571465246534,0"
-              Start="0,0"
-              End="40.6571465246534,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="40.6571465246534,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\DIM_ROUTES_NAME"
-          TopLeft="277.142861862572,213.129414338637" />
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="239.74285717935,232.088235267306">
           <EdgeLayout.Curve>
@@ -5535,26 +5725,28 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="201.6,41.6"
-          Id="Package\Truncate DIM_PRODUCTS"
-          TopLeft="533.31429075027,34.1882353584659" />
-        <NodeLayout
-          Size="173.6,41.6"
-          Id="Package\Truncate DIM_SKUS"
-          TopLeft="537.428580308447,98.7705859348433" />
-        <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\Truncate WEEKLY_SEASONALITY"
-          TopLeft="538.142866034897,162.899997174039" />
-        <NodeLayout
-          Size="219.2,41.6"
-          Id="Package\Truncate DIM_SALES_OFFICE"
-          TopLeft="539.571437487797,225.499996627078" />
-        <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\Truncate DIM_SALES_GROUP"
-          TopLeft="542.428580393597,283.511760721652" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="220.54285717935,299.170585934843">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.1571465246534,0"
+              Start="0,0"
+              End="40.6571465246534,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.6571465246534,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="734.91429075027,56.9999976298388">
@@ -5684,7 +5876,7 @@
     design-time-name="Package\Daily_Seasonality">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Daily_Seasonality\OLE DB Destination"
@@ -5724,7 +5916,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5760,7 +5954,7 @@
     design-time-name="Package\DIM_CONVERSION_RATE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\DIM_CONVERSION_RATE\Excel Source"
@@ -5800,7 +5994,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6005,6 +6201,112 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DIM_PRODUCTS\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DIM_ROUTES_NAME">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DIM_ROUTES_NAME\Excel Source"
+          TopLeft="105,60" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DIM_ROUTES_NAME\OLE DB Destination"
+          TopLeft="110,241" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\DIM_ROUTES_NAME\Data Conversion"
+          TopLeft="112,152" />
+        <EdgeLayout
+          Id="Package\DIM_ROUTES_NAME.Paths[Excel Source Output]"
+          TopLeft="174.2,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.3999999999999,50.4"
+              Start="0,0"
+              End="15.3999999999999,42.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2"
+                    Point2="0,25.2"
+                    Point3="4,25.2" />
+                  <mssgle:LineSegment
+                    End="11.3999999999999,25.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.3999999999999,25.2"
+                    Point2="15.3999999999999,25.2"
+                    Point3="15.3999999999999,29.2" />
+                  <mssgle:LineSegment
+                    End="15.3999999999999,42.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DIM_ROUTES_NAME.Paths[Data Conversion Output]"
+          TopLeft="192.4,193.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.4"
+              Start="0,0"
+              End="0,39.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM_ROUTES_NAME\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DIM_ROUTES_NAME\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6298,49 +6600,47 @@
     design-time-name="Package\DIM_SKUS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\DIM_SKUS\OLE DB Destination"
-          TopLeft="97.1428587971902,143.764707898599" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\DIM_SKUS\Excel Source"
-          TopLeft="85.0000014475414,42.8235300123485" />
+          TopLeft="83.5714299946415,28.2941180438732" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DIM_SKUS\OLE DB Destination"
+          TopLeft="122.857144949388,131.529413609356" />
         <EdgeLayout
           Id="Package\DIM_SKUS.Paths[Excel Source Output]"
-          TopLeft="154.200001447541,84.4235300123486">
+          TopLeft="152.771429994641,69.8941180438732">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="28.1428573496488,59.3411778862501"
+              EndConnector="55.285714954746,61.635295565483"
               Start="0,0"
-              End="28.1428573496488,51.8411778862501">
+              End="55.285714954746,54.135295565483">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.6705889431251" />
+                    End="0,26.8176477827415" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.6705889431251"
-                    Point2="0,29.6705889431251"
-                    Point3="4,29.6705889431251" />
+                    Point1="0,26.8176477827415"
+                    Point2="0,30.8176477827415"
+                    Point3="4,30.8176477827415" />
                   <mssgle:LineSegment
-                    End="24.1428573496488,29.6705889431251" />
+                    End="51.285714954746,30.8176477827415" />
                   <mssgle:CubicBezierSegment
-                    Point1="24.1428573496488,29.6705889431251"
-                    Point2="28.1428573496488,29.6705889431251"
-                    Point3="28.1428573496488,33.6705889431251" />
+                    Point1="51.285714954746,30.8176477827415"
+                    Point2="55.285714954746,30.8176477827415"
+                    Point3="55.285714954746,34.8176477827415" />
                   <mssgle:LineSegment
-                    End="28.1428573496488,51.8411778862501" />
+                    End="55.285714954746,54.135295565483" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6348,19 +6648,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DIM_SKUS\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DIM_SKUS\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6478,97 +6765,8 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\DIM_ROUTES_NAME">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\DIM_ROUTES_NAME\Excel Source"
-          TopLeft="105,60" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\DIM_ROUTES_NAME\OLE DB Destination"
-          TopLeft="110,241" />
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\DIM_ROUTES_NAME\Data Conversion"
-          TopLeft="112,152" />
-        <EdgeLayout
-          Id="Package\DIM_ROUTES_NAME.Paths[Excel Source Output]"
-          TopLeft="174.2,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="15.3999999999999,50.4"
-              Start="0,0"
-              End="15.3999999999999,42.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.2"
-                    Point2="0,25.2"
-                    Point3="4,25.2" />
-                  <mssgle:LineSegment
-                    End="11.3999999999999,25.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11.3999999999999,25.2"
-                    Point2="15.3999999999999,25.2"
-                    Point3="15.3999999999999,29.2" />
-                  <mssgle:LineSegment
-                    End="15.3999999999999,42.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DIM_ROUTES_NAME.Paths[Data Conversion Output]"
-          TopLeft="192.4,193.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.4"
-              Start="0,0"
-              End="0,39.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DIM_ROUTES_NAME\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DIM_ROUTES_NAME\OLE DB Destination">
+    design-time-name="Package\DIM_SKUS\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
