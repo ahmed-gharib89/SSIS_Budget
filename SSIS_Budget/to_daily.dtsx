@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{81E2BCC3-A8EE-4A49-8F0C-9CE6F44802AA}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{6B0BC86E-D108-43D0-8822-B3B6B07A5E78}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -154,7 +154,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE bud.bpre_daily" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF OBJECT_ID( bud.bpre_daily) IN NOT NULL&#xA;DROP TABLE bud.bpre_daily&#xA;CREATE TABLE bud.bpre_daily(&#xA;[Period_Year] [float] NULL,&#xA;&#x9;[Company Code] [int] NULL,&#xA;&#x9;[Cost Element] [bigint] NULL,&#xA;&#x9;[Value in Obj. Crcy] [money] NULL,&#xA;&#x9;[Total Quantity] [float] NULL,&#xA;&#x9;[Product] [bigint] NULL,&#xA;&#x9;[Sales District] [int] NULL,&#xA;&#x9;[Route] [varchar](10) NULL,&#xA;&#x9;[Region] [int] NULL,&#xA;&#x9;[Plant] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Distribution Channel] [int] NULL,&#xA;&#x9;[Customer] [bigint] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[BP|RE] [varchar](10) NULL,&#xA;&#x9;[Date] [datetime] NULL&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -181,18 +181,18 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="106.4,41.6"
+          Size="106.666666666667,41.3333333333334"
           Id="Package\Foreach Loop Container\Insert"
           TopLeft="47.0142887918319,16.6475968695244" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="212.8,113.6"
-          Size="214.4,156.8"
+          PanelSize="214.666666666667,114"
+          Size="214.666666666667,156.666666666667"
           Id="Package\Foreach Loop Container"
           TopLeft="270.714289302728,63.0588235723106" />
         <NodeLayout
-          Size="144.8,41.6"
+          Size="144.666666666667,41.3333333333334"
           Id="Package\Truncate bpre"
           TopLeft="60,60" />
         <EdgeLayout

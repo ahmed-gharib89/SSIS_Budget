@@ -11,61 +11,112 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{C9050363-538D-4BE2-B56F-0B425DA8B597}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{801FB56C-A5A3-4C34-9A8D-C495EF797532}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_1"
+      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_1_TILL APRIL"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="sku_cont_1"
       DTS:DTSID="{CC82C57E-4B8F-45CB-9C27-F8512B54072B}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_1"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="EXEC ('&#xA;INSERT into calc.SKU_CONTRIBUTION_1&#xA; SELECT&#xA;&#x9;   detailed.[Period_Year]&#xA;      , detailed.[Sales Group]&#xA;      , detailed.[Sales office]&#xA;&#x9;  , detailed.[Product] &#xA;&#x9;  ,price.PRICE_INCLUDE_TAX&#xA;&#x9;  ,price.PRICE as PRICE_EXCLUDE_TAX&#xA;&#x9;  ,sku.[RGB | NRB]&#xA;&#x9;  ,detailed.[SKU_Quantity]&#xA;&#x9;  /SUM(detailed.[SKU_Quantity]) &#xA;&#x9;  OVER ( PARTITION BY detailed.[Sales office], detailed.[Sales Group],sku.[RGB | NRB])&#xA;&#x9;  AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;&#x9;&#x9;, [Product]&#xA;&#x9;&#x9;, [Sales office]&#xA;&#x9;&#x9;, [Sales Group] &#xA;&#x9;&#x9;, SUM([Total Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[bpre]&#xA;&#x9;&#x9;WHERE [BP|RE] = ''BP''&#xA;and [Period_Year] &gt;1&#xA;       GROUP BY &#xA;&#x9;&#x9;[Period_Year]&#xA;&#x9;&#x9;,[Product]&#xA;&#x9;&#x9;,[Sales office]&#xA;&#x9;&#x9;,[Sales Group]&#xA;&#x9;&#x9;) as detailed&#xA;join dim.DIM_SKU_PRICE as price&#xA;on price.SKU_CODE =detailed.Product&#xA;join dim.DIM_SKUS as sku&#xA;on sku.SKU_CODE = detailed.Product'&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_2"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="sku_cont_1"
-      DTS:DTSID="{6643ba49-fe96-4223-97c8-4d4c896cb4fd}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_2"
+      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_1_TILL APRIL"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="EXEC ('&#xA;INSERT into calc.SKU_CONTRIBUTION_2&#xA; SELECT&#xA;    detailed.[Period_Year]&#xA;      , detailed.[Sales Group]&#xA;      , detailed.[Sales office]&#xA;   , detailed.[Product] &#xA;   ,price.PRICE_INCLUDE_TAX&#xA;   ,price.PRICE as PRICE_EXCLUDE_TAX&#xA;   ,sku.[RGB | NRB]&#xA;   ,detailed.[SKU_Quantity]&#xA;   /SUM(detailed.[SKU_Quantity]) &#xA;   OVER ( PARTITION BY detailed.[Sales office], detailed.[Sales Group],sku.[RGB | NRB])&#xA;   AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;  , [Product]&#xA;  , [Sales office]&#xA;  , [Sales Group] &#xA;  , SUM([Total Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[bpre]&#xA;  WHERE [BP|RE] = ''BP''&#xA;and [Period_Year] &gt;2&#xA;       GROUP BY &#xA;  [Period_Year]&#xA;  ,[Product]&#xA;  ,[Sales office]&#xA;  ,[Sales Group]&#xA;  ) as detailed&#xA;join dim.DIM_SKU_PRICE as price&#xA;on price.SKU_CODE =detailed.Product&#xA;join dim.DIM_SKUS as sku&#xA;on sku.SKU_CODE = detailed.Product'&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;insert into [calc].[SKU_CONTRIBUTION_1]&#xA; &#xA;select * from &#xA; (SELECT&#xA;&#x9;   detailed.[Period_Year]&#xA;      , detailed.[Sales_Group]&#xA;      , detailed.[Sales_office]&#xA;&#x9;  , detailed.[Product] &#xA;&#x9;  ,prod.PRICE_INCLUDE_TAX&#xA;&#x9;  ,prod.PRICE as PRICE_EXCLUDE_TAX&#xA;&#x9;  ,prod.[RGB | NRB]&#xA;&#x9;  ,prod.[Unit Factor]&#xA;&#x9;  ,detailed.[SKU_Quantity]&#xA;&#x9;  /SUM(detailed.[SKU_Quantity]) &#xA;&#x9;  OVER ( PARTITION BY detailed.[Sales_office], detailed.[Sales_Group],prod.[RGB | NRB])&#xA;&#x9;  AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;&#x9;&#x9;, [Product]&#xA;&#x9;&#x9;, [Sales_office]&#xA;&#x9;&#x9;, [Sales_Group] &#xA;&#x9;&#x9;, SUM([Total_Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[re_sales_office]&#xA;&#x9;&#x9;WHERE [Period_Year] &gt;1&#xA;       GROUP BY &#xA;&#x9;&#x9;[Period_Year]&#xA;&#x9;&#x9;,[Product]&#xA;&#x9;&#x9;,[Sales_office]&#xA;&#x9;&#x9;,[Sales_Group]&#xA;&#x9;&#x9;) as detailed&#xA;join &#xA;&#x9;dim.PRODUCTS prod&#xA;ON &#xA;&#x9;prod.SKU_CODE =detailed.Product) as stage1&#xA;&#x9;where [Period_Year]&lt;5" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_3"
+      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_1_TILL DEC"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="sku_cont_1"
-      DTS:DTSID="{946a0e57-4422-4f3d-9323-0720062f5ab0}"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EDE23686-0661-4B1A-AA2D-22F0908659C7}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_3"
+      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_1_TILL DEC"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="EXEC ('&#xA;INSERT into calc.SKU_CONTRIBUTION_3&#xA; SELECT&#xA;    detailed.[Period_Year]&#xA;      , detailed.[Sales Group]&#xA;      , detailed.[Sales office]&#xA;   , detailed.[Product] &#xA;   ,price.PRICE_INCLUDE_TAX&#xA;   ,price.PRICE as PRICE_EXCLUDE_TAX&#xA;   ,sku.[RGB | NRB]&#xA;   ,detailed.[SKU_Quantity]&#xA;   /SUM(detailed.[SKU_Quantity]) &#xA;   OVER ( PARTITION BY detailed.[Sales office], detailed.[Sales Group],sku.[RGB | NRB])&#xA;   AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;  , [Product]&#xA;  , [Sales office]&#xA;  , [Sales Group] &#xA;  , SUM([Total Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[bpre]&#xA;  WHERE [BP|RE] = ''BP''&#xA;and [Period_Year] &gt;3&#xA;       GROUP BY &#xA;  [Period_Year]&#xA;  ,[Product]&#xA;  ,[Sales office]&#xA;  ,[Sales Group]&#xA;  ) as detailed&#xA;join dim.DIM_SKU_PRICE as price&#xA;on price.SKU_CODE =detailed.Product&#xA;join dim.DIM_SKUS as sku&#xA;on sku.SKU_CODE = detailed.Product'&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;insert into [calc].[SKU_CONTRIBUTION_1]&#xA; select *&#xA; from&#xA;&#x9;(SELECT&#xA;    detailed.[Period_Year]&#xA;      , detailed.[Sales Group]&#xA;      , detailed.[Sales office]&#xA;   , detailed.[Product] &#xA;   ,prod.PRICE_INCLUDE_TAX&#xA;   ,prod.PRICE as PRICE_EXCLUDE_TAX&#xA;   ,prod.[RGB | NRB]&#xA;   ,prod.[Unit Factor]&#xA;   ,detailed.[SKU_Quantity]&#xA;   /SUM(detailed.[SKU_Quantity]) &#xA;   OVER ( PARTITION BY detailed.[Sales office], detailed.[Sales Group],prod.[RGB | NRB])&#xA;   AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;  , [Product]&#xA;  , [Sales office]&#xA;  , [Sales Group] &#xA;  , SUM([Total Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[bpre]&#xA;  WHERE [BP|RE] = 'BP'&#xA;and [Period_Year] &gt;1&#xA;       GROUP BY &#xA;  [Period_Year]&#xA;  ,[Product]&#xA;  ,[Sales office]&#xA;  ,[Sales Group]&#xA;  ) as detailed&#xA;join &#xA; dim.PRODUCTS prod&#xA;ON &#xA; prod.SKU_CODE =detailed.Product) as stage1&#xA; where [Period_Year]&gt;5&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_2_TILL APRIL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="sku_cont_1"
+      DTS:DTSID="{69a922a1-fd11-4dcc-a5ea-272668ce1885}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_2_TILL APRIL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="&#xA;insert into [calc].[SKU_CONTRIBUTION_2]&#xA; &#xA;select * from &#xA; (SELECT&#xA;    detailed.[Period_Year]&#xA;      , detailed.[Sales_Group]&#xA;      , detailed.[Sales_office]&#xA;   , detailed.[Product] &#xA;   ,prod.PRICE_INCLUDE_TAX&#xA;   ,prod.PRICE as PRICE_EXCLUDE_TAX&#xA;   ,prod.[RGB | NRB]&#xA;   ,prod.[Unit Factor]&#xA;   ,detailed.[SKU_Quantity]&#xA;   /SUM(detailed.[SKU_Quantity]) &#xA;   OVER ( PARTITION BY detailed.[Sales_office], detailed.[Sales_Group],prod.[RGB | NRB])&#xA;   AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;  , [Product]&#xA;  , [Sales_office]&#xA;  , [Sales_Group] &#xA;  , SUM([Total_Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[re_sales_office]&#xA;  WHERE [Period_Year] &gt;2&#xA;       GROUP BY &#xA;  [Period_Year]&#xA;  ,[Product]&#xA;  ,[Sales_office]&#xA;  ,[Sales_Group]&#xA;  ) as detailed&#xA;join &#xA; dim.PRODUCTS prod&#xA;ON &#xA; prod.SKU_CODE =detailed.Product) as stage1&#xA; where [Period_Year]&lt;5" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_2_TILL DEC"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{be133e08-3665-401f-81bb-bcd7f78ffec7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_2_TILL DEC"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="&#xA;insert into [calc].[SKU_CONTRIBUTION_2]&#xA; select *&#xA; from&#xA; (SELECT&#xA;    detailed.[Period_Year]&#xA;      , detailed.[Sales Group]&#xA;      , detailed.[Sales office]&#xA;   , detailed.[Product] &#xA;   ,prod.PRICE_INCLUDE_TAX&#xA;   ,prod.PRICE as PRICE_EXCLUDE_TAX&#xA;   ,prod.[RGB | NRB]&#xA;   ,prod.[Unit Factor]&#xA;   ,detailed.[SKU_Quantity]&#xA;   /SUM(detailed.[SKU_Quantity]) &#xA;   OVER ( PARTITION BY detailed.[Sales office], detailed.[Sales Group],prod.[RGB | NRB])&#xA;   AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;  , [Product]&#xA;  , [Sales office]&#xA;  , [Sales Group] &#xA;  , SUM([Total Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[bpre]&#xA;  WHERE [BP|RE] = 'BP'&#xA;and [Period_Year] &gt;2&#xA;       GROUP BY &#xA;  [Period_Year]&#xA;  ,[Product]&#xA;  ,[Sales office]&#xA;  ,[Sales Group]&#xA;  ) as detailed&#xA;join &#xA; dim.PRODUCTS prod&#xA;ON &#xA; prod.SKU_CODE =detailed.Product) as stage1&#xA; where [Period_Year]&gt;5&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_3_TILL APRIL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="sku_cont_1"
+      DTS:DTSID="{c20e6889-7341-4df5-8720-ebac51ca6782}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_3_TILL APRIL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="&#xA;insert into [calc].[SKU_CONTRIBUTION_3]&#xA; &#xA;select * from &#xA; (SELECT&#xA;    detailed.[Period_Year]&#xA;      , detailed.[Sales_Group]&#xA;      , detailed.[Sales_office]&#xA;   , detailed.[Product] &#xA;   ,prod.PRICE_INCLUDE_TAX&#xA;   ,prod.PRICE as PRICE_EXCLUDE_TAX&#xA;   ,prod.[RGB | NRB]&#xA;   ,prod.[Unit Factor]&#xA;   ,detailed.[SKU_Quantity]&#xA;   /SUM(detailed.[SKU_Quantity]) &#xA;   OVER ( PARTITION BY detailed.[Sales_office], detailed.[Sales_Group],prod.[RGB | NRB])&#xA;   AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;  , [Product]&#xA;  , [Sales_office]&#xA;  , [Sales_Group] &#xA;  , SUM([Total_Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[re_sales_office]&#xA;  WHERE [Period_Year] &gt;3&#xA;       GROUP BY &#xA;  [Period_Year]&#xA;  ,[Product]&#xA;  ,[Sales_office]&#xA;  ,[Sales_Group]&#xA;  ) as detailed&#xA;join &#xA; dim.PRODUCTS prod&#xA;ON &#xA; prod.SKU_CODE =detailed.Product) as stage1&#xA; where [Period_Year]&lt;5" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\INSERT INTO SKU_CONTRIBUTION_3_TILL DEC"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8d2c8ab5-d07b-4442-8b7d-9e3f796c6cd8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="INSERT INTO SKU_CONTRIBUTION_3_TILL DEC"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="&#xA;insert into [calc].[SKU_CONTRIBUTION_3]&#xA; select *&#xA; from&#xA; (SELECT&#xA;    detailed.[Period_Year]&#xA;      , detailed.[Sales Group]&#xA;      , detailed.[Sales office]&#xA;   , detailed.[Product] &#xA;   ,prod.PRICE_INCLUDE_TAX&#xA;   ,prod.PRICE as PRICE_EXCLUDE_TAX&#xA;   ,prod.[RGB | NRB]&#xA;   ,prod.[Unit Factor]&#xA;   ,detailed.[SKU_Quantity]&#xA;   /SUM(detailed.[SKU_Quantity]) &#xA;   OVER ( PARTITION BY detailed.[Sales office], detailed.[Sales Group],prod.[RGB | NRB])&#xA;   AS [SKU_contribution] &#xA;from  (SELECT&#xA;         [Period_Year]&#xA;  , [Product]&#xA;  , [Sales office]&#xA;  , [Sales Group] &#xA;  , SUM([Total Quantity]) AS [SKU_Quantity]&#xA;        FROM [bud].[bpre]&#xA;  WHERE [BP|RE] = 'BP'&#xA;and [Period_Year] &gt;3&#xA;       GROUP BY &#xA;  [Period_Year]&#xA;  ,[Product]&#xA;  ,[Sales office]&#xA;  ,[Sales Group]&#xA;  ) as detailed&#xA;join &#xA; dim.PRODUCTS prod&#xA;ON &#xA; prod.SKU_CODE =detailed.Product) as stage1&#xA; where [Period_Year]&gt;5&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -77,36 +128,36 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE SKU_CONTRIBUTION_1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="&#xA; IF OBJECT_ID('calc.SKU_CONTRIBUTION_1') IS NOT NULL&#xA;drop TABLE [calc].[SKU_CONTRIBUTION_1]&#xA;CREATE TABLE [calc].[SKU_CONTRIBUTION_1](&#xA;&#x9;[Period_Year] [float] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Product] [bigint] NULL,&#xA;&#x9;[PRICE_INCLUDE_TAX] [bigint] NULL,&#xA;&#x9;[PRICE_EXCLUDE_TAX] [float] NULL,&#xA;&#x9;[RGB | NRB] [varchar](max) NULL,&#xA;&#x9;[SKU_contribution] [float] NULL" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA; IF OBJECT_ID('calc.SKU_CONTRIBUTION_1') IS NOT NULL&#xA;drop TABLE [calc].[SKU_CONTRIBUTION_1];&#xA;go&#xA;&#x9;CREATE TABLE [calc].[SKU_CONTRIBUTION_1](&#xA;&#x9;[Period_Year] [float] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Product] [bigint] NULL,&#xA;&#x9;[PRICE_INCLUDE_TAX] [bigint] NULL,&#xA;&#x9;[PRICE_EXCLUDE_TAX] [float] NULL,&#xA;&#x9;[RGB | NRB] [nvarchar](max) NULL,&#xA;&#x9;[Unit Factor] [float] NULL,&#xA;&#x9;[SKU_contribution] [float] NULL)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\TRUNCATE SKU_CONTRIBUTION_2"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{3dd18598-bcf1-4b09-8683-d151078f96f8}"
+      DTS:DTSID="{107609f4-7b9e-4d62-a2b7-af14aeb65793}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE SKU_CONTRIBUTION_2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="DELETE FROM calc.SKU_CONTRIBUTION_2" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA; IF OBJECT_ID('calc.SKU_CONTRIBUTION_2') IS NOT NULL&#xA;drop TABLE [calc].[SKU_CONTRIBUTION_2];&#xA;go&#xA; CREATE TABLE [calc].[SKU_CONTRIBUTION_2](&#xA; [Period_Year] [float] NULL,&#xA; [Sales Group] [int] NULL,&#xA; [Sales office] [int] NULL,&#xA; [Product] [bigint] NULL,&#xA; [PRICE_INCLUDE_TAX] [bigint] NULL,&#xA; [PRICE_EXCLUDE_TAX] [float] NULL,&#xA; [RGB | NRB] [nvarchar](max) NULL,&#xA; [Unit Factor] [float] NULL,&#xA; [SKU_contribution] [float] NULL)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\TRUNCATE SKU_CONTRIBUTION_3"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{a3408116-9750-4075-aebe-afc5808acb87}"
+      DTS:DTSID="{ba707d58-0145-4673-a3d7-e4dc6bf571de}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE SKU_CONTRIBUTION_3"
@@ -116,7 +167,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="DELETE FROM calc.SKU_CONTRIBUTION_3" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA; IF OBJECT_ID('calc.SKU_CONTRIBUTION_3') IS NOT NULL&#xA;drop TABLE [calc].[SKU_CONTRIBUTION_3];&#xA;go&#xA; CREATE TABLE [calc].[SKU_CONTRIBUTION_3](&#xA; [Period_Year] [float] NULL,&#xA; [Sales Group] [int] NULL,&#xA; [Sales office] [int] NULL,&#xA; [Product] [bigint] NULL,&#xA; [PRICE_INCLUDE_TAX] [bigint] NULL,&#xA; [PRICE_EXCLUDE_TAX] [float] NULL,&#xA; [RGB | NRB] [nvarchar](max) NULL,&#xA; [Unit Factor] [float] NULL,&#xA; [SKU_contribution] [float] NULL)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -128,23 +179,39 @@
       DTS:From="Package\TRUNCATE SKU_CONTRIBUTION_1"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\INSERT INTO SKU_CONTRIBUTION_1" />
+      DTS:To="Package\INSERT INTO SKU_CONTRIBUTION_1_TILL APRIL" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{DB9D7FF3-D9DA-4F22-ABF0-6655E25D87CC}"
+      DTS:DTSID="{11c643bd-dd96-4189-ad71-45d3f65cc4f3}"
       DTS:From="Package\TRUNCATE SKU_CONTRIBUTION_2"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\INSERT INTO SKU_CONTRIBUTION_2" />
+      DTS:To="Package\INSERT INTO SKU_CONTRIBUTION_2_TILL APRIL" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{96CD7B0E-E71F-47FD-B586-2B780572BFEE}"
-      DTS:From="Package\TRUNCATE SKU_CONTRIBUTION_3"
+      DTS:DTSID="{093FB9A4-2FD1-4B5D-8BCB-1D7B052C85A6}"
+      DTS:From="Package\INSERT INTO SKU_CONTRIBUTION_1_TILL APRIL"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 2"
-      DTS:To="Package\INSERT INTO SKU_CONTRIBUTION_3" />
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\INSERT INTO SKU_CONTRIBUTION_1_TILL DEC" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{55a3a723-cfc7-40a3-ace9-3c60bde9753e}"
+      DTS:From="Package\INSERT INTO SKU_CONTRIBUTION_2_TILL APRIL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3 1"
+      DTS:To="Package\INSERT INTO SKU_CONTRIBUTION_2_TILL DEC" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{371a5972-06ca-4162-b70d-51d345420c95}"
+      DTS:From="Package\INSERT INTO SKU_CONTRIBUTION_3_TILL APRIL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3 2"
+      DTS:To="Package\INSERT INTO SKU_CONTRIBUTION_3_TILL DEC" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -159,43 +226,39 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="258.666666666667,41.3333333333334"
-          Id="Package\INSERT INTO SKU_CONTRIBUTION_1"
-          TopLeft="5.50000000000006,107.1" />
-        <NodeLayout
-          Size="258.666666666667,41.3333333333334"
-          Id="Package\INSERT INTO SKU_CONTRIBUTION_2"
-          TopLeft="324.5,107.1" />
-        <NodeLayout
-          Size="258.666666666667,41.3333333333334"
-          Id="Package\INSERT INTO SKU_CONTRIBUTION_3"
-          TopLeft="643.5,107.1" />
+          Size="332,42.6666666666667"
+          Id="Package\INSERT INTO SKU_CONTRIBUTION_1_TILL APRIL"
+          TopLeft="46.3928565335062,129.009774509682" />
         <NodeLayout
           Size="261.333333333334,42.6666666666667"
           Id="Package\TRUNCATE SKU_CONTRIBUTION_1"
-          TopLeft="11.5,5.50000000000007" />
-        <NodeLayout
-          Size="246.666666666667,41.3333333333334"
-          Id="Package\TRUNCATE SKU_CONTRIBUTION_2"
-          TopLeft="330.5,5.49999999999995" />
-        <NodeLayout
-          Size="246.666666666667,41.3333333333334"
-          Id="Package\TRUNCATE SKU_CONTRIBUTION_3"
-          TopLeft="649.5,5.49999999999995" />
+          TopLeft="52.3928565335061,27.4097745096821" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="138.5,48.1666666666667">
+          TopLeft="183.059523200173,70.0764411763488">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.9333333333333"
+              EndConnector="29.3333333333334,58.9333333333333"
               Start="0,0"
-              End="0,51.4333333333333">
+              End="29.3333333333334,51.4333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.4333333333333" />
+                    End="0,25.4666666666666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.4666666666666"
+                    Point2="0,29.4666666666666"
+                    Point3="4,29.4666666666666" />
+                  <mssgle:LineSegment
+                    End="25.3333333333334,29.4666666666666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.3333333333334,29.4666666666666"
+                    Point2="29.3333333333334,29.4666666666666"
+                    Point3="29.3333333333334,33.4666666666666" />
+                  <mssgle:LineSegment
+                    End="29.3333333333334,51.4333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -204,20 +267,82 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="324,42.6666666666667"
+          Id="Package\INSERT INTO SKU_CONTRIBUTION_1_TILL DEC"
+          TopLeft="60.7142848095723,221.879703424455" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="212.392856533506,171.676441176349">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.3214282760662,50.2032622481066"
+              Start="0,0"
+              End="10.3214282760662,42.7032622481066">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1016311240533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1016311240533"
+                    Point2="0,25.1016311240533"
+                    Point3="4,25.1016311240533" />
+                  <mssgle:LineSegment
+                    End="6.32142827606617,25.1016311240533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.32142827606617,25.1016311240533"
+                    Point2="10.3214282760662,25.1016311240533"
+                    Point3="10.3214282760662,29.1016311240533" />
+                  <mssgle:LineSegment
+                    End="10.3214282760662,42.7032622481066" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="332,42.6666666666667"
+          Id="Package\INSERT INTO SKU_CONTRIBUTION_2_TILL APRIL"
+          TopLeft="369.642851634749,133.454637603366" />
+        <NodeLayout
+          Size="261.333333333334,42.6666666666667"
+          Id="Package\TRUNCATE SKU_CONTRIBUTION_2"
+          TopLeft="375.642851634749,31.854637603366" />
+        <NodeLayout
+          Size="324,42.6666666666667"
+          Id="Package\INSERT INTO SKU_CONTRIBUTION_2_TILL DEC"
+          TopLeft="383.964279910816,226.324566518139" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="453.7,47.1">
+          TopLeft="506.309518301416,74.5213042700327">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="29.3333333333334,58.9333333333335"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="29.3333333333334,51.4333333333335">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,25.4666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.4666666666667"
+                    Point2="0,29.4666666666667"
+                    Point3="4,29.4666666666667" />
+                  <mssgle:LineSegment
+                    End="25.3333333333334,29.4666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.3333333333334,29.4666666666667"
+                    Point2="29.3333333333334,29.4666666666667"
+                    Point3="29.3333333333334,33.4666666666667" />
+                  <mssgle:LineSegment
+                    End="29.3333333333334,51.4333333333335" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -227,19 +352,77 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="772.7,47.1">
+          Id="Package.PrecedenceConstraints[Constraint 3 1]"
+          TopLeft="535.642851634749,176.121304270033">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="10.3214282760662,50.2032622481063"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="10.3214282760662,42.7032622481063">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,21.1016311240531" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1016311240531"
+                    Point2="0,25.1016311240531"
+                    Point3="4,25.1016311240531" />
+                  <mssgle:LineSegment
+                    End="6.32142827606617,25.1016311240531" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.32142827606617,25.1016311240531"
+                    Point2="10.3214282760662,25.1016311240531"
+                    Point3="10.3214282760662,29.1016311240531" />
+                  <mssgle:LineSegment
+                    End="10.3214282760662,42.7032622481063" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="332,42.6666666666667"
+          Id="Package\INSERT INTO SKU_CONTRIBUTION_3_TILL APRIL"
+          TopLeft="743.773799601233,121.944612393525" />
+        <NodeLayout
+          Size="261.333333333334,42.6666666666667"
+          Id="Package\TRUNCATE SKU_CONTRIBUTION_3"
+          TopLeft="749.773799601233,20.3446123935255" />
+        <NodeLayout
+          Size="324,42.6666666666667"
+          Id="Package\INSERT INTO SKU_CONTRIBUTION_3_TILL DEC"
+          TopLeft="758.095227877299,214.814541308299" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3 2]"
+          TopLeft="909.773799601233,164.611279060192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.3214282760662,50.2032622481065"
+              Start="0,0"
+              End="10.3214282760662,42.7032622481065">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1016311240533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1016311240533"
+                    Point2="0,25.1016311240533"
+                    Point3="4,25.1016311240533" />
+                  <mssgle:LineSegment
+                    End="6.32142827606617,25.1016311240533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.32142827606617,25.1016311240533"
+                    Point2="10.3214282760662,25.1016311240533"
+                    Point3="10.3214282760662,29.1016311240533" />
+                  <mssgle:LineSegment
+                    End="10.3214282760662,42.7032622481065" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
