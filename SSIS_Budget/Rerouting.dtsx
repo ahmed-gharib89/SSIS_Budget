@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{D553737F-6096-41E5-BE4F-E66F896A35D6}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{41546DE1-1AF5-4983-B74F-DE7A4239ED6C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Budget\تعديلات بعد اعادة توزيع الخطوط.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Budget\تعديلات بعد اعادة توزيع الخطوط.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -33,7 +33,17 @@
       DTS:ObjectName="Excel Connection Manager 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Budget\تعديلات بعد اعادة توزيع الخطوط.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Budget\تعديلات بعد اعادة توزيع الخطوط.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3752C3E2-C761-44C9-B1B5-A18D49661739}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Budget\rerouting.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -344,8 +354,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\Load sheets into DB\Excel Source.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
-                      connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                      connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                      connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -673,7 +683,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dim].[Reroute]</property>
+                      name="OpenRowset">[bud].[rerouting]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -808,6 +818,26 @@
                           externalMetadataColumnId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Group]"
                           lineageId="Package\Foreach Loop Container\Load sheets into DB\Excel Source.Outputs[Excel Source Output].Columns[Sales Group]" />
                         <inputColumn
+                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Value in Obj# Crcy]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Value in Obj# Crcy"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Value in Obj. Crcy]"
+                          lineageId="Package\Foreach Loop Container\Load sheets into DB\Excel Source.Outputs[Excel Source Output].Columns[Value in Obj# Crcy]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Period/Year]"
+                          cachedDataType="r8"
+                          cachedName="Period/Year"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Period_Year]"
+                          lineageId="Package\Foreach Loop Container\Load sheets into DB\Excel Source.Outputs[Excel Source Output].Columns[Period/Year]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sheet_name]"
+                          cachedDataType="wstr"
+                          cachedLength="71"
+                          cachedName="sheet_name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sheetName]"
+                          lineageId="Package\Foreach Loop Container\Load sheets into DB\Derived Column.Outputs[Derived Column Output].Columns[sheet_name]" />
+                        <inputColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BP|RE]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -815,37 +845,16 @@
                           cachedName="BP|RE"
                           externalMetadataColumnId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BP|RE]"
                           lineageId="Package\Foreach Loop Container\Load sheets into DB\Derived Column.Outputs[Derived Column Output].Columns[BP|RE]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Period/Year]"
-                          cachedDataType="r8"
-                          cachedName="Period/Year"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Period/Year]"
-                          lineageId="Package\Foreach Loop Container\Load sheets into DB\Excel Source.Outputs[Excel Source Output].Columns[Period/Year]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Value in Obj# Crcy]"
-                          cachedDataType="wstr"
-                          cachedLength="255"
-                          cachedName="Value in Obj# Crcy"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Value in Obj# Crcy]"
-                          lineageId="Package\Foreach Loop Container\Load sheets into DB\Excel Source.Outputs[Excel Source Output].Columns[Value in Obj# Crcy]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sheet_name]"
-                          cachedDataType="wstr"
-                          cachedLength="71"
-                          cachedName="sheet_name"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SheetName]"
-                          lineageId="Package\Foreach Loop Container\Load sheets into DB\Derived Column.Outputs[Derived Column Output].Columns[sheet_name]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company Code]"
-                          dataType="r8"
+                          dataType="i4"
                           name="Company Code" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cost Element]"
-                          dataType="wstr"
-                          length="255"
+                          dataType="i8"
                           name="Cost Element" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total Quantity]"
@@ -853,65 +862,60 @@
                           name="Total Quantity" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Product]"
-                          dataType="wstr"
-                          length="255"
+                          dataType="i8"
                           name="Product" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales District]"
-                          dataType="r8"
+                          dataType="i4"
                           name="Sales District" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Route]"
                           dataType="wstr"
-                          length="255"
+                          length="10"
                           name="Route" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
-                          dataType="r8"
+                          dataType="i4"
                           name="Region" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
-                          dataType="wstr"
-                          length="255"
+                          dataType="i4"
                           name="Plant" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales office]"
-                          dataType="wstr"
-                          length="255"
+                          dataType="i4"
                           name="Sales office" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distribution Channel]"
-                          dataType="r8"
+                          dataType="i4"
                           name="Distribution Channel" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
-                          dataType="wstr"
-                          length="255"
+                          dataType="i8"
                           name="Customer" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Group]"
-                          dataType="r8"
+                          dataType="i4"
                           name="Sales Group" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Period_Year]"
+                          dataType="r8"
+                          name="Period_Year" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Value in Obj. Crcy]"
+                          dataType="cy"
+                          name="Value in Obj. Crcy" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sheetName]"
+                          dataType="wstr"
+                          length="150"
+                          name="sheetName" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BP|RE]"
                           codePage="1252"
                           dataType="str"
                           length="2"
                           name="BP|RE" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SheetName]"
-                          dataType="wstr"
-                          length="255"
-                          name="SheetName" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Period/Year]"
-                          dataType="r8"
-                          name="Period/Year" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Value in Obj# Crcy]"
-                          dataType="wstr"
-                          length="255"
-                          name="Value in Obj# Crcy" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -985,7 +989,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="&#xA;&#xA;SELECT &#xA; [Period_Year]&#xA;    ,[Company Code]&#xA;    ,[Cost Element]&#xA;    ,[Value in Obj. Crcy]&#xA;    ,[Total Quantity]&#xA;    ,[Product]&#xA;    ,[Sales District]&#xA;    ,[Route]&#xA;    ,[Region]&#xA;    ,[Plant]&#xA;    ,[Sales office]&#xA;    ,[Distribution Channel]&#xA;    ,[Customer]&#xA;    ,[Sales Group]&#xA; into dim.bp_rerouting&#xA;FROM bud.bpre&#xA;&#xA;WHERE [BP|RE] = 'BP'&#xA;&#xA;AND &#xA; CONCAT(Period_Year, [Sales Group], [Sales office], Route) &#xA;    NOT IN (&#xA;     SELECT CONCAT(Period_Year, [Sales Group], [Sales office], Route) &#xA;     FROM dim.Reroute&#xA;    )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;&#xA;SELECT &#xA; [Period_Year]&#xA;    ,[Company Code]&#xA;    ,[Cost Element]&#xA;    ,[Value in Obj. Crcy]&#xA;    ,[Total Quantity]&#xA;    ,[Product]&#xA;    ,[Sales District]&#xA;    ,[Route]&#xA;    ,[Region]&#xA;    ,[Plant]&#xA;    ,[Sales office]&#xA;    ,[Distribution Channel]&#xA;    ,[Customer]&#xA;    ,[Sales Group]&#xA; into dim.bp_rerouting&#xA;FROM bud.bpre&#xA;&#xA;WHERE [BP|RE] = 'BP'&#xA;&#xA;AND &#xA; CONCAT(Period_Year, [Sales Group], [Sales office], Route) &#xA;    NOT IN (&#xA;     SELECT CONCAT(Period_Year, [Sales Group], [Sales office], Route) &#xA;     FROM bud.rerouting&#xA;    )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1002,7 +1006,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="INSERT INTO bud.bp_reroute&#xA;SELECT&#xA;  route.[Period_Year]&#xA;      ,route.[Company Code]&#xA;      , 40110000 AS [Cost Element]&#xA;      ,route.[Total Quantity]&#xA;      ,route.[Product]&#xA;      ,route.[Sales District]&#xA;   ,route.[Total Quantity] * price.PRICE as  [Value in Obj. Crcy]&#xA;      ,route.[Route]&#xA;  &#xA;      ,route.[Region]&#xA;      ,route.[Plant]&#xA;      ,route.[Sales office]&#xA;      ,route.[Distribution Channel]&#xA;      ,route.[Customer]&#xA;      ,route.[Sales Group]&#xA; from dim.Reroute route&#xA;JOIN [dim].[DIM_SKU_PRICE] price&#xA;ON price.[SKU_CODE]=route.[Product]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO bud.bp_reroute &#xA;SELECT&#xA;  route.[Period_Year]&#xA;      ,route.[Company Code]&#xA;      , 40110000 AS [Cost Element]&#xA;      ,route.[Total Quantity]&#xA;      ,route.[Product]&#xA;      ,route.[Sales District]&#xA;   ,route.[Total Quantity] * price.PRICE as  [Value in Obj. Crcy]&#xA;      ,route.[Route]&#xA;  &#xA;      ,route.[Region]&#xA;      ,route.[Plant]&#xA;      ,route.[Sales office]&#xA;      ,route.[Distribution Channel]&#xA;      ,route.[Customer]&#xA;      ,route.[Sales Group]&#xA; from bud.rerouting route&#xA;JOIN [dim].[DIM_SKU_PRICE] price&#xA;ON price.[SKU_CODE]=route.[Product]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1019,7 +1023,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="IF OBJECT_ID ('[dim].[Reroute]') IS NOT NULL&#xA;delete from  [dim].[Reroute]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF OBJECT_ID ('[bud].[rerouting]') IS NOT NULL&#xA;delete from  [bud].[rerouting]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1096,34 +1100,34 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="217.333333333334,42.6666666666667"
+          Size="217.6,42.4"
           Id="Package\DELETE rows with 0 quantity"
           TopLeft="85.6249996181576,504.350886504186" />
         <NodeLayout
-          Size="176,42.6666666666667"
+          Size="176,42.4"
           Id="Package\Foreach Loop Container\Load sheets into DB"
           TopLeft="38.9999960511923,18.5000002446928" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="275.333333333334,66.6666666666667"
-          Size="275.333333333334,109.333333333334"
+          PanelSize="275.2,66.4"
+          Size="275.2,109.6"
           Id="Package\Foreach Loop Container"
           TopLeft="67.458338315909,136.824559561874" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\Insert pbre data"
           TopLeft="118.281249131542,347.93860329755" />
         <NodeLayout
-          Size="178.666666666667,42.6666666666667"
+          Size="178.4,42.4"
           Id="Package\Insert Rerouting data"
           TopLeft="109.062499268913,414.833340551769" />
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166.4,42.4"
           Id="Package\Trancate rerouting"
           TopLeft="60,60" />
         <NodeLayout
-          Size="148,42.6666666666667"
+          Size="148,42.4"
           Id="Package\truncate bp_re"
           TopLeft="83.9062496437695,272.521935713286" />
         <EdgeLayout
@@ -1152,50 +1156,6 @@
                     Point3="61.7916716492423,21.0789464476037" />
                   <mssgle:LineSegment
                     End="61.7916716492423,26.6578928952073" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="197.005207533561,390.605269964217">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.2280705875524"
-              Start="0,0"
-              End="0,16.7280705875524">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.7280705875524" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="196.343749443535,457.500007218436">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.8508792857502"
-              Start="0,0"
-              End="0,39.3508792857502">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.3508792857502" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1274,6 +1234,50 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="197.005207533561,390.605269964217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.2280705875524"
+              Start="0,0"
+              End="0,16.7280705875524">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7280705875524" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="196.343749443535,457.500007218436">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.8508792857502"
+              Start="0,0"
+              End="0,39.3508792857502">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3508792857502" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1283,19 +1287,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,42.4"
           Id="Package\Foreach Loop Container\Load sheets into DB\Derived Column"
           TopLeft="364,80" />
         <NodeLayout
-          Size="142.666666666667,42.6666666666667"
+          Size="142.4,42.4"
           Id="Package\Foreach Loop Container\Load sheets into DB\Excel Source"
           TopLeft="345,2" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="174.4,42.4"
           Id="Package\Foreach Loop Container\Load sheets into DB\OLE DB Destination"
           TopLeft="274.875003101304,216.263157353837" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157.6,42.4"
           Id="Package\Foreach Loop Container\Load sheets into DB\Conditional Split"
           TopLeft="428,147" />
         <EdgeLayout
@@ -1398,7 +1402,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-87.4472510535147,18.2982453435852,30.436171875,9.5537109375"
+              BoundingBox="-87.4472510535145,18.2982453435852,30.436171875,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
