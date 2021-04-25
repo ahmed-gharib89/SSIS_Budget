@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{18A8DDB0-21C6-4239-941C-5741ED7B6595}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{D0C6B849-5A22-4DB3-8A35-B82C4BD913DA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4141,7 +4141,8 @@
                       name="SKU_BRAND_SORT" />
                     <externalMetadataColumn
                       refId="Package\DIM_SKUS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RGB | NRB]"
-                      dataType="nText"
+                      codePage="1252"
+                      dataType="text"
                       name="RGB | NRB" />
                   </externalMetadataColumns>
                 </input>
@@ -4551,7 +4552,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_SALES_GROUP"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4568,7 +4569,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_SALES_OFFICE"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5182,75 +5183,75 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="160,41.3333333333334"
+          Size="160,41.6"
           Id="Package\Daily_Seasonality"
           TopLeft="276.914289558177,36" />
         <NodeLayout
-          Size="199.333333333334,41.3333333333334"
+          Size="199.2,41.6"
           Id="Package\DIM_CONVERSION_RATE"
           TopLeft="279.057146737527,91.717646415341" />
         <NodeLayout
-          Size="157.333333333334,41.3333333333334"
+          Size="157.6,41.6"
           Id="Package\DIM_CUSTOMER"
           TopLeft="279.771432463977,156.611763547614" />
         <NodeLayout
-          Size="176.666666666667,41.3333333333334"
+          Size="176.8,41.6"
           Id="Package\DIM_ROUTES_NAME"
           TopLeft="277.142861862572,213.129414338637" />
         <NodeLayout
-          Size="173.333333333334,41.3333333333334"
+          Size="173.6,41.6"
           Id="Package\DIM_SALES_GROUP"
           TopLeft="784.414298200851,287.335292374881" />
         <NodeLayout
-          Size="174.666666666667,41.3333333333334"
+          Size="174.4,41.6"
           Id="Package\DIM_SALES_OFFICE"
           TopLeft="787.628583969876,224.458820472869" />
         <NodeLayout
-          Size="157.333333333334,41.3333333333334"
+          Size="157.6,41.6"
           Id="Package\DIM_SKU_PRICE"
           TopLeft="268.700003704003,278.752938881382" />
         <NodeLayout
-          Size="128.666666666667,41.3333333333334"
+          Size="128.8,41.6"
           Id="Package\DIM_SKUS"
           TopLeft="775.485726620227,99.8470540081339" />
         <NodeLayout
-          Size="205.333333333334,41.3333333333334"
+          Size="205.6,41.6"
           Id="Package\Truncate Daily_Seasonality"
           TopLeft="6.71428555615091,33.7058823207671" />
         <NodeLayout
-          Size="244,41.3333333333334"
+          Size="244,41.6"
           Id="Package\Truncate DIM_CONVERSION_RATE"
           TopLeft="12.4285713677504,87.3058808622064" />
         <NodeLayout
-          Size="202.666666666667,41.3333333333334"
+          Size="202.4,41.6"
           Id="Package\Truncate DIM_CUSTOMER"
           TopLeft="18.1428571793498,149.905880315246" />
         <NodeLayout
-          Size="221.333333333334,41.3333333333334"
+          Size="221.6,41.6"
           Id="Package\Truncate DIM_ROUTES_NAME"
           TopLeft="18.1428571793497,209.447056195974" />
         <NodeLayout
-          Size="218.666666666667,41.3333333333334"
+          Size="218.4,41.6"
           Id="Package\Truncate DIM_SALES_GROUP"
           TopLeft="542.428580393597,283.511760721652" />
         <NodeLayout
-          Size="219.333333333334,41.3333333333334"
+          Size="219.2,41.6"
           Id="Package\Truncate DIM_SALES_OFFICE"
           TopLeft="539.571437487797,225.499996627078" />
         <NodeLayout
-          Size="202.666666666667,41.3333333333334"
+          Size="202.4,41.6"
           Id="Package\Truncate DIM_SKU_PRICE"
           TopLeft="18.14285717935,277.988232988305" />
         <NodeLayout
-          Size="173.333333333334,41.3333333333334"
+          Size="173.6,41.6"
           Id="Package\Truncate DIM_SKUS"
           TopLeft="537.428580308447,98.7705859348433" />
         <NodeLayout
-          Size="235.333333333334,41.3333333333334"
+          Size="235.2,41.6"
           Id="Package\Truncate WEEKLY_SEASONALITY"
           TopLeft="538.142866034897,162.899997174039" />
         <NodeLayout
-          Size="190.666666666667,41.3333333333334"
+          Size="190.4,41.6"
           Id="Package\WEEKLY_SEASONALITY"
           TopLeft="780.485726705377,159.458819561269" />
         <EdgeLayout
@@ -6088,7 +6089,7 @@
     design-time-name="Package\DIM_SKUS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\DIM_SKUS\OLE DB Destination"
@@ -6128,9 +6129,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
