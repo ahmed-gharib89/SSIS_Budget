@@ -5,6 +5,10 @@
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=localhost;Initial Catalog=budget;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=10.250.2.14;User ID=coke_bi;Initial Catalog=COKE_BI;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2AFfHyfFdkClsy/gj6oXNQAAAAACAAAAAAADZgAAwAAAABAAAACGbgPTutKJtc7VMsLfzGI1AAAAAASAAACgAAAAEAAAAI5vNPUB2CznIJF5c26/M1V4AAAALKKCiwP8S/4o2D+oD4hrewo7erbr/1bUqaXRliTSrQG7hZYL8aNAUNQ6ks5cwvyCS/IwDmz8X45Rov75PV4Mzm8XouavpqxIdmqsME4S2ClX93vq1ZrougxsZ6IEhytDs2FKbMMrn7DnmemfpZeoNyfuyEOfDA3LFAAAAN4A0okJrL83Gsl/y8yES5gIH01g</DTS:Password>
+    </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
