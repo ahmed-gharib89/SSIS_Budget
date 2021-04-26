@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{1D17D2F7-DA66-4A45-A10D-892EC03A551A}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{BAC7A496-09A6-4C2D-BE19-FC13FE6162E5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -840,7 +840,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="USE [budget]&#xA;GO&#xA;&#xA;/****** Object:  Table [dim].[SELL_IN_CUSTOMERS]    Script Date: 4/25/2021 10:01:22 PM ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dim].[SELL_IN_CUSTOMERS]') AND type in (N'U'))&#xA;DROP TABLE [dim].[SELL_IN_CUSTOMERS]&#xA;GO&#xA;&#xA;/****** Object:  Table [dim].[SELL_IN_CUSTOMERS]    Script Date: 4/25/2021 10:01:22 PM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [dim].[SELL_IN_CUSTOMERS](&#xA;&#x9;[Region] [int] NULL,&#xA;&#x9;[Sales District] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Route] [nvarchar](255) NULL,&#xA;&#x9;[Customer] [bigint] NULL,&#xA;&#x9;[Customer Name] [nvarchar](255) NULL,&#xA;&#x9;[RGB] [int] NULL,&#xA;&#x9;[NRB] [int] NULL,&#xA;&#x9;[Contract] [int] NULL,&#xA;&#x9;[Distribution Channel] [int] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[FirstSales] [datetime] NULL,&#xA;&#x9;[Per1] [DECIMAL](18,2) NULL,&#xA;&#x9;[Per2] [DECIMAL](18,2) NULL,&#xA;&#x9;[Per3] [DECIMAL](18,2) NULL,&#xA;&#x9;[SplitFromPeriod] [int] NULL,&#xA;&#x9;[Prior] [nvarchar](255) NULL,&#xA;&#x9;[NewContract] [DECIMAL](18,2) NULL,&#xA;&#x9;[NewRGB] [DECIMAL](18,2) NULL,&#xA;&#x9;[NewNRB] [DECIMAL](18,2) NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;/****** Object:  Table [dim].[SELL_IN_CUSTOMERS]    Script Date: 4/25/2021 10:01:22 PM ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dim].[SELL_IN_CUSTOMERS]') AND type in (N'U'))&#xA;DROP TABLE [dim].[SELL_IN_CUSTOMERS]&#xA;GO&#xA;&#xA;/****** Object:  Table [dim].[SELL_IN_CUSTOMERS]    Script Date: 4/25/2021 10:01:22 PM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [dim].[SELL_IN_CUSTOMERS](&#xA;&#x9;[Region] [int] NULL,&#xA;&#x9;[Sales District] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Route] [nvarchar](255) NULL,&#xA;&#x9;[Customer] [bigint] NULL,&#xA;&#x9;[Customer Name] [nvarchar](255) NULL,&#xA;&#x9;[RGB] [int] NULL,&#xA;&#x9;[NRB] [int] NULL,&#xA;&#x9;[Contract] [int] NULL,&#xA;&#x9;[Distribution Channel] [int] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[FirstSales] [datetime] NULL,&#xA;&#x9;[Per1] [DECIMAL](18,2) NULL,&#xA;&#x9;[Per2] [DECIMAL](18,2) NULL,&#xA;&#x9;[Per3] [DECIMAL](18,2) NULL,&#xA;&#x9;[SplitFromPeriod] [int] NULL,&#xA;&#x9;[Prior] [nvarchar](255) NULL,&#xA;&#x9;[NewContract] [DECIMAL](18,2) NULL,&#xA;&#x9;[NewRGB] [DECIMAL](18,2) NULL,&#xA;&#x9;[NewNRB] [DECIMAL](18,2) NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>

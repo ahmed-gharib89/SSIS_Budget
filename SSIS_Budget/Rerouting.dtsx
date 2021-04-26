@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{F8211EBF-C595-4F16-B850-59D321B233F4}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{044E0D05-EC4D-48EC-9B7F-C0B483C3F643}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -88,30 +88,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clean bp_rerouting"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="DELETE FROM [bud].[bp_rerouting]&#xA;WHERE  ([Total Quantity] &lt; 0.001)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\DELETE rows with 0 quantity"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{c3658f0a-5746-413b-8be2-27101974ba66}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="DELETE rows with 0 quantity"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="DELETE FROM bud.bp_reroute&#xA;WHERE ([Total Quantity] &lt; 0.001)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM [bud].[bp_rerouting]&#xA;WHERE  ([Total Quantity] &lt; 0.001)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1008,7 +990,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="INSERT INTO bp_reroute"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1025,48 +1007,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="INSERT INTO bp_reroute from rerouting"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
           SQLTask:SqlStatementSource="INSERT INTO [bud].[bp_rerouting]&#xA;SELECT &#xA;     [Period_Year]&#xA;    ,[Company Code]&#xA;    ,[Cost Element]&#xA;    ,[Value in Obj. Crcy]&#xA;    ,[Total Quantity]&#xA;    ,[Product]&#xA;    ,[Sales District]&#xA;    ,[Route]&#xA;    ,[Region]&#xA;    ,[Plant]&#xA;    ,[Sales office]&#xA;    ,[Distribution Channel]&#xA;    ,[Customer]&#xA;    ,[Sales Group]&#xA;FROM &#xA;     dim.Reroute" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Insert pbre data"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{ab477e87-66f6-4b2a-a2dc-9e3178fda7b1}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Insert pbre data"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="&#xA;&#xA;SELECT &#xA; [Period_Year]&#xA;    ,[Company Code]&#xA;    ,[Cost Element]&#xA;    ,[Value in Obj. Crcy]&#xA;    ,[Total Quantity]&#xA;    ,[Product]&#xA;    ,[Sales District]&#xA;    ,[Route]&#xA;    ,[Region]&#xA;    ,[Plant]&#xA;    ,[Sales office]&#xA;    ,[Distribution Channel]&#xA;    ,[Customer]&#xA;    ,[Sales Group]&#xA; into bud.bp_rerouting&#xA;FROM bud.bpre&#xA;&#xA;WHERE [BP|RE] = 'BP'&#xA;&#xA;AND &#xA; CONCAT(Period_Year, [Sales Group], [Sales office], Route) &#xA;    NOT IN (&#xA;     SELECT CONCAT(Period_Year, [Sales Group], [Sales office], Route) &#xA;     FROM dim.Reroute&#xA;    )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Insert Rerouting data"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{18bd9bad-34ee-4ef9-9dfe-02962a64e60d}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Insert Rerouting data"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="INSERT INTO bud.bp_reroute &#xA;SELECT&#xA;  route.[Period_Year]&#xA;      ,route.[Company Code]&#xA;      , 40110000 AS [Cost Element]&#xA;      ,route.[Total Quantity]&#xA;      ,route.[Product]&#xA;      ,route.[Sales District]&#xA;   ,route.[Total Quantity] * price.PRICE as  [Value in Obj. Crcy]&#xA;      ,route.[Route]&#xA;  &#xA;      ,route.[Region]&#xA;      ,route.[Plant]&#xA;      ,route.[Sales office]&#xA;      ,route.[Distribution Channel]&#xA;      ,route.[Customer]&#xA;      ,route.[Sales Group]&#xA; from dim.Reroute route&#xA;JOIN [dim].[DIM_SKU_PRICE] price&#xA;ON price.[SKU_CODE]=route.[Product]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1078,7 +1024,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Trancate rerouting"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1095,7 +1041,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="truncate bp_re"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1112,7 +1058,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Update rerouting table with value and cost element"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1146,22 +1092,6 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\INSERT INTO bp_reroute" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
-      DTS:CreationName=""
-      DTS:DTSID="{6d78ebce-20cb-4b3c-b449-b46669ce0d36}"
-      DTS:From="Package\Insert pbre data"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 3"
-      DTS:To="Package\Insert Rerouting data" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
-      DTS:CreationName=""
-      DTS:DTSID="{c9417991-566e-47e7-9877-1996486dec23}"
-      DTS:From="Package\Insert Rerouting data"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 4"
-      DTS:To="Package\DELETE rows with 0 quantity" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
@@ -1198,11 +1128,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="217.6,42.4"
-          Id="Package\DELETE rows with 0 quantity"
-          TopLeft="415.625005238024,475.292062567235" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="176,42.4"
           Id="Package\Foreach Loop Container\Load sheets into DB"
@@ -1211,28 +1137,20 @@
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="275.2,66.4"
-          Size="275.2,109.6"
+          Size="320,109.6"
           Id="Package\Foreach Loop Container"
           TopLeft="6.42857051625512,81.0010293672054" />
         <NodeLayout
-          Size="154.4,42.4"
-          Id="Package\Insert pbre data"
-          TopLeft="448.281254751409,318.879779360599" />
-        <NodeLayout
-          Size="178.4,42.4"
-          Id="Package\Insert Rerouting data"
-          TopLeft="439.06250488878,385.774516614818" />
-        <NodeLayout
-          Size="275.2,42.4"
+          Size="320,42.4"
           Id="Package\Trancate rerouting"
           TopLeft="6.42857051625512,0.352940339943117" />
         <NodeLayout
-          Size="275.2,41.6"
+          Size="320,41.6"
           Id="Package\truncate bp_re"
           TopLeft="6.42857051625512,289.345465360994" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="144.028570516255,42.7529403399431">
+          TopLeft="166.428570516255,42.7529403399431">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1252,80 +1170,24 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="526.871879820094,361.279779360599">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.494737254219"
-              Start="0,0"
-              End="0,16.994737254219">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.994737254219" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="526.343755063402,428.441183281485">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.8508792857502"
-              Start="0,0"
-              End="0,39.3508792857502">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.3508792857502" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="320,41.6"
           Id="Package\Update rerouting table with value and cost element"
           TopLeft="6.42857051625515,217.515586927661" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="144.028570516255,190.601029367205">
+          TopLeft="166.428570516255,190.601029367205">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="22.4,26.9145575604556"
+              EndConnector="0,26.9145575604556"
               Start="0,0"
-              End="22.4,19.4145575604556">
+              End="0,19.4145575604556">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.4572787802278" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.4572787802278"
-                    Point2="0,13.4572787802278"
-                    Point3="4,13.4572787802278" />
-                  <mssgle:LineSegment
-                    End="18.4,13.4572787802278" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.4,13.4572787802278"
-                    Point2="22.4,13.4572787802278"
-                    Point3="22.4,17.4572787802278" />
-                  <mssgle:LineSegment
-                    End="22.4,19.4145575604556" />
+                    End="0,19.4145575604556" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1340,26 +1202,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-22.4,30.2298784333331"
+              EndConnector="0,30.2298784333331"
               Start="0,0"
-              End="-22.4,22.7298784333331">
+              End="0,22.7298784333331">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.1149392166665" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.1149392166665"
-                    Point2="0,15.1149392166665"
-                    Point3="-4,15.1149392166665" />
-                  <mssgle:LineSegment
-                    End="-18.4,15.1149392166665" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.4,15.1149392166665"
-                    Point2="-22.4,15.1149392166665"
-                    Point3="-22.4,19.1149392166665" />
-                  <mssgle:LineSegment
-                    End="-22.4,22.7298784333331" />
+                    End="0,22.7298784333331" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1369,20 +1219,20 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="275.2,41.6"
+          Size="320,41.6"
           Id="Package\INSERT INTO bp_reroute from rerouting"
           TopLeft="6.42857051625512,438.150883769384" />
         <NodeLayout
-          Size="275.2,41.6"
+          Size="320,41.6"
           Id="Package\INSERT INTO bp_reroute"
           TopLeft="6.42857051625512,365.103824291648" />
         <NodeLayout
-          Size="275.2,46.4"
+          Size="320,46.4"
           Id="Package\Clean bp_rerouting"
           TopLeft="6.42857051625512,514.42147289483" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="144.028570516255,330.945465360994">
+          TopLeft="166.428570516255,330.945465360994">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1404,7 +1254,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="144.028570516255,406.703824291648">
+          TopLeft="166.428570516255,406.703824291648">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1426,7 +1276,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="144.028570516255,479.750883769384">
+          TopLeft="166.428570516255,479.750883769384">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

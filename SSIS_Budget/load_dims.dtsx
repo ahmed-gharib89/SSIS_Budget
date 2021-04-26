@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{D0C6B849-5A22-4DB3-8A35-B82C4BD913DA}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{76F2A8A5-B200-4C05-9BC6-94523D660315}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -789,16 +789,6 @@
                       name="Customer"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name]"
-                      length="255"
-                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Name]"
-                      name="Name"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[DChl]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -844,16 +834,6 @@
                       externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Rg]"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Rg]"
                       name="Rg"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Region]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region]"
-                      length="255"
-                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Region]"
-                      name="Region"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[SDst]"
@@ -1144,6 +1124,405 @@
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Date1]"
                       name="Date1"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Name 1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name 1]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Name 1]"
+                      name="Name 1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Name 2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name 2]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Name 2]"
+                      name="Name 2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Telephone 1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Telephone 1]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Telephone 1]"
+                      name="Telephone 1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Street]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Street]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Street]"
+                      name="Street"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Latitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Latitude]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Longitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Longitude]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[National ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[National ID]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[National ID]"
+                      name="National ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Tax ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Tax ID]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Tax ID]"
+                      name="Tax ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Commercial ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Commercial ID]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Commercial ID]"
+                      name="Commercial ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Passport ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Passport ID]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Passport ID]"
+                      name="Passport ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Search term 1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Search term 1]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Search term 1]"
+                      name="Search term 1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[External BP Number]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[External BP Number]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[External BP Number]"
+                      name="External BP Number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Type]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Business Partner Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Business Partner Type]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Business Partner Type]"
+                      name="Business Partner Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[SOrg#]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[SOrg#]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[SOrg#]"
+                      name="SOrg#"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Sales Organization]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sales Organization]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Sales Organization]"
+                      name="Sales Organization"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Region (State, Province, County)]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region (State, Province, County)]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Region (State, Province, County)]"
+                      name="Region (State, Province, County)"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Area]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Area]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Area]"
+                      name="Area"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Area1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Area1]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Area1]"
+                      name="Area1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[PG]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[PG]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[PG]"
+                      name="PG"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Price group (customer)]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Price group (customer)]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Price group (customer)]"
+                      name="Price group (customer)"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[InvSc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[InvSc]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[InvSc]"
+                      name="InvSc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Text:Invoice List Schedule (calendar ide]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Text:Invoice List Schedule (calendar ide]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Text:Invoice List Schedule (calendar ide]"
+                      name="Text:Invoice List Schedule (calendar ide"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Curr#]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Curr#]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Curr#]"
+                      name="Curr#"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Currency]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Currency]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Currency]"
+                      name="Currency"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[FPass Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[FPass Code]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[FPass Code]"
+                      name="FPass Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Pers#No#]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Pers#No#]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Pers#No#]"
+                      name="Pers#No#"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AAGC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AAGC]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AAGC]"
+                      name="AAGC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Cl]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Cl]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Cl]"
+                      name="Cl"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Customer classification]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer classification]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Customer classification]"
+                      name="Customer classification"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[OrBlk]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[OrBlk]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[OrBlk]"
+                      name="OrBlk"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Customer order block (sales area)]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer order block (sales area)]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Customer order block (sales area)]"
+                      name="Customer order block (sales area)"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Central order block for customer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Central order block for customer]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Central order block for customer]"
+                      name="Central order block for customer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Vendor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Vendor]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Vendor]"
+                      name="Vendor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Account Number of Vendor or Creditor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Account Number of Vendor or Creditor]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Account Number of Vendor or Creditor]"
+                      name="Account Number of Vendor or Creditor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AGrp]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AGrp]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AGrp]"
+                      name="AGrp"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AGrp1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AGrp1]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AGrp1]"
+                      name="AGrp1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AuGr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AuGr]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AuGr]"
+                      name="AuGr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AuGr1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AuGr1]"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[AuGr1]"
+                      name="AuGr1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Attachements]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Attachements]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Attachements]"
+                      name="Attachements"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1153,16 +1532,13 @@
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer]"
-                      dataType="r8"
-                      name="Customer" />
-                    <externalMetadataColumn
-                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name]"
                       dataType="wstr"
                       length="255"
-                      name="Name" />
+                      name="Customer" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[DChl]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="DChl" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Distribution Channel]"
@@ -1171,7 +1547,8 @@
                       name="Distribution Channel" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dv]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="Dv" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Division]"
@@ -1180,16 +1557,13 @@
                       name="Division" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Rg]"
-                      dataType="r8"
-                      name="Rg" />
-                    <externalMetadataColumn
-                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region]"
                       dataType="wstr"
                       length="255"
-                      name="Region" />
+                      name="Rg" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[SDst]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="SDst" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sales district]"
@@ -1198,7 +1572,8 @@
                       name="Sales district" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[SOff#]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="SOff#" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sales Office]"
@@ -1207,11 +1582,13 @@
                       name="Sales Office" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Plnt]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="Plnt" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[SGrp]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="SGrp" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sales Group Text]"
@@ -1230,7 +1607,8 @@
                       name="Route" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[CGrp]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="CGrp" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer group]"
@@ -1269,7 +1647,8 @@
                       name="Segmentation" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[PL]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="PL" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Price List Type]"
@@ -1283,7 +1662,8 @@
                       name="PayT" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Recon#acct]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="Recon#acct" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Text:Account Assignment Group for this c]"
@@ -1292,7 +1672,8 @@
                       name="Text:Account Assignment Group for this c" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[CuPP]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="CuPP" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Text:Pricing procedure assigned to this]"
@@ -1320,12 +1701,212 @@
                       name="Time" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[User1]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="User1" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date1]"
                       dataType="date"
                       name="Date1" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name 1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name 1" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name 2]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name 2" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Telephone 1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Telephone 1" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Street]"
+                      dataType="wstr"
+                      length="255"
+                      name="Street" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Latitude]"
+                      dataType="wstr"
+                      length="255"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Longitude]"
+                      dataType="wstr"
+                      length="255"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[National ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="National ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Tax ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tax ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Commercial ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="Commercial ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Passport ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="Passport ID" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Search term 1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Search term 1" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[External BP Number]"
+                      dataType="wstr"
+                      length="255"
+                      name="External BP Number" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="255"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Business Partner Type]"
+                      dataType="wstr"
+                      length="255"
+                      name="Business Partner Type" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[SOrg#]"
+                      dataType="wstr"
+                      length="255"
+                      name="SOrg#" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sales Organization]"
+                      dataType="wstr"
+                      length="255"
+                      name="Sales Organization" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region (State, Province, County)]"
+                      dataType="wstr"
+                      length="255"
+                      name="Region (State, Province, County)" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Area]"
+                      dataType="wstr"
+                      length="255"
+                      name="Area" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Area1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Area1" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[PG]"
+                      dataType="wstr"
+                      length="255"
+                      name="PG" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Price group (customer)]"
+                      dataType="wstr"
+                      length="255"
+                      name="Price group (customer)" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[InvSc]"
+                      dataType="wstr"
+                      length="255"
+                      name="InvSc" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Text:Invoice List Schedule (calendar ide]"
+                      dataType="wstr"
+                      length="255"
+                      name="Text:Invoice List Schedule (calendar ide" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Curr#]"
+                      dataType="wstr"
+                      length="255"
+                      name="Curr#" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Currency]"
+                      dataType="wstr"
+                      length="255"
+                      name="Currency" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[FPass Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="FPass Code" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Pers#No#]"
+                      dataType="wstr"
+                      length="255"
+                      name="Pers#No#" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AAGC]"
+                      dataType="wstr"
+                      length="255"
+                      name="AAGC" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Cl]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cl" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer classification]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customer classification" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[OrBlk]"
+                      dataType="wstr"
+                      length="255"
+                      name="OrBlk" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer order block (sales area)]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customer order block (sales area)" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Central order block for customer]"
+                      dataType="wstr"
+                      length="255"
+                      name="Central order block for customer" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Vendor]"
+                      dataType="wstr"
+                      length="255"
+                      name="Vendor" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Account Number of Vendor or Creditor]"
+                      dataType="wstr"
+                      length="255"
+                      name="Account Number of Vendor or Creditor" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AGrp]"
+                      dataType="wstr"
+                      length="255"
+                      name="AGrp" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AGrp1]"
+                      dataType="wstr"
+                      length="255"
+                      name="AGrp1" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AuGr]"
+                      dataType="wstr"
+                      length="255"
+                      name="AuGr" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[AuGr1]"
+                      dataType="wstr"
+                      length="255"
+                      name="AuGr1" />
+                    <externalMetadataColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].ExternalColumns[Attachements]"
+                      dataType="r8"
+                      name="Attachements" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1335,18 +1916,110 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Customer]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Customer]"
                       name="Customer" />
                     <outputColumn
-                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Name]"
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Name 1]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Name]"
-                      name="Name" />
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Name 1]"
+                      name="Name 1" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Name 2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Name 2]"
+                      name="Name 2" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Telephone 1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Telephone 1]"
+                      name="Telephone 1" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Street]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Street]"
+                      name="Street" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Latitude]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Latitude]"
+                      name="Latitude" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Longitude]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Longitude]"
+                      name="Longitude" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[National ID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[National ID]"
+                      name="National ID" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Tax ID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Tax ID]"
+                      name="Tax ID" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Commercial ID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Commercial ID]"
+                      name="Commercial ID" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Passport ID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Passport ID]"
+                      name="Passport ID" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Search term 1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Search term 1]"
+                      name="Search term 1" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[External BP Number]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[External BP Number]"
+                      name="External BP Number" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Type]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Type]"
+                      name="Type" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Business Partner Type]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Business Partner Type]"
+                      name="Business Partner Type" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[SOrg#]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[SOrg#]"
+                      name="SOrg#" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Sales Organization]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Sales Organization]"
+                      name="Sales Organization" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[DChl]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[DChl]"
                       name="DChl" />
                     <outputColumn
@@ -1357,7 +2030,8 @@
                       name="Distribution Channel" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Dv]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Dv]"
                       name="Dv" />
                     <outputColumn
@@ -1368,18 +2042,20 @@
                       name="Division" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Rg]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Rg]"
                       name="Rg" />
                     <outputColumn
-                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Region]"
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Region (State, Province, County)]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Region]"
-                      name="Region" />
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Region (State, Province, County)]"
+                      name="Region (State, Province, County)" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[SDst]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[SDst]"
                       name="SDst" />
                     <outputColumn
@@ -1390,7 +2066,8 @@
                       name="Sales district" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[SOff#]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[SOff#]"
                       name="SOff#" />
                     <outputColumn
@@ -1401,12 +2078,14 @@
                       name="Sales Office" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Plnt]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Plnt]"
                       name="Plnt" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[SGrp]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[SGrp]"
                       name="SGrp" />
                     <outputColumn
@@ -1415,6 +2094,18 @@
                       length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Sales Group Text]"
                       name="Sales Group Text" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Area]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Area]"
+                      name="Area" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Area1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Area1]"
+                      name="Area1" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Rout]"
                       dataType="wstr"
@@ -1429,7 +2120,8 @@
                       name="Route" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[CGrp]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[CGrp]"
                       name="CGrp" />
                     <outputColumn
@@ -1476,7 +2168,8 @@
                       name="Segmentation" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[PL]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[PL]"
                       name="PL" />
                     <outputColumn
@@ -1486,6 +2179,42 @@
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Price List Type]"
                       name="Price List Type" />
                     <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[PG]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[PG]"
+                      name="PG" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Price group (customer)]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Price group (customer)]"
+                      name="Price group (customer)" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[InvSc]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[InvSc]"
+                      name="InvSc" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Text:Invoice List Schedule (calendar ide]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Text:Invoice List Schedule (calendar ide]"
+                      name="Text:Invoice List Schedule (calendar ide" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Curr#]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Curr#]"
+                      name="Curr#" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Currency]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Currency]"
+                      name="Currency" />
+                    <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[PayT]"
                       dataType="wstr"
                       length="255"
@@ -1493,9 +2222,28 @@
                       name="PayT" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Recon#acct]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Recon#acct]"
                       name="Recon#acct" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[FPass Code]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[FPass Code]"
+                      name="FPass Code" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Pers#No#]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Pers#No#]"
+                      name="Pers#No#" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AAGC]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AAGC]"
+                      name="AAGC" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Text:Account Assignment Group for this c]"
                       dataType="wstr"
@@ -1504,7 +2252,8 @@
                       name="Text:Account Assignment Group for this c" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[CuPP]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[CuPP]"
                       name="CuPP" />
                     <outputColumn
@@ -1526,6 +2275,48 @@
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Customer Account Group]"
                       name="Customer Account Group" />
                     <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Cl]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Cl]"
+                      name="Cl" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Customer classification]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Customer classification]"
+                      name="Customer classification" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[OrBlk]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[OrBlk]"
+                      name="OrBlk" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Customer order block (sales area)]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Customer order block (sales area)]"
+                      name="Customer order block (sales area)" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Central order block for customer]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Central order block for customer]"
+                      name="Central order block for customer" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Vendor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Vendor]"
+                      name="Vendor" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Account Number of Vendor or Creditor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Account Number of Vendor or Creditor]"
+                      name="Account Number of Vendor or Creditor" />
+                    <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[User]"
                       dataType="wstr"
                       length="255"
@@ -1543,7 +2334,8 @@
                       name="Time" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[User1]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[User1]"
                       name="User1" />
                     <outputColumn
@@ -1551,6 +2343,35 @@
                       dataType="date"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Date1]"
                       name="Date1" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AGrp]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AGrp]"
+                      name="AGrp" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AGrp1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AGrp1]"
+                      name="AGrp1" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AuGr]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AuGr]"
+                      name="AuGr" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AuGr1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[AuGr1]"
+                      name="AuGr1" />
+                    <outputColumn
+                      refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Attachements]"
+                      dataType="r8"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[Attachements]"
+                      name="Attachements" />
                     <outputColumn
                       refId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1646,6 +2467,257 @@
                       cachedName="Date"
                       externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer]"
+                      cachedDataType="r8"
+                      cachedName="Customer"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name 1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Name 1"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Name 1]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DChl]"
+                      cachedDataType="r8"
+                      cachedName="DChl"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DChl]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[DChl]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Distribution Channel]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Distribution Channel"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distribution Channel]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Distribution Channel]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Dv]"
+                      cachedDataType="r8"
+                      cachedName="Dv"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dv]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Dv]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Division]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Division"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Division]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Division]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rg]"
+                      cachedDataType="r8"
+                      cachedName="Rg"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rg]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Rg]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SDst]"
+                      cachedDataType="r8"
+                      cachedName="SDst"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SDst]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[SDst]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sales district]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Sales district"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales district]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Sales district]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SOff#]"
+                      cachedDataType="r8"
+                      cachedName="SOff#"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SOff.]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[SOff#]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sales Office]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Sales Office"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Office]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Sales Office]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Plnt]"
+                      cachedDataType="r8"
+                      cachedName="Plnt"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plnt]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Plnt]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SGrp]"
+                      cachedDataType="r8"
+                      cachedName="SGrp"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SGrp]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[SGrp]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sales Group Text]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Sales Group Text"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Group Text]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Sales Group Text]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rout]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Rout"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rout]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Rout]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Route]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Route"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Route]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Route]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CGrp]"
+                      cachedDataType="r8"
+                      cachedName="CGrp"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CGrp]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[CGrp]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Customer group"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer group]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Customer group]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Clus]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Clus"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Clus]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Clus]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cluster]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Cluster"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cluster]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Cluster]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Chan]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Chan"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Chan]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Chan]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Channel]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Channel"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Channel]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Segm]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Segm"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Segm]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Segm]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Segmentation]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Segmentation"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Segmentation]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Segmentation]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PL]"
+                      cachedDataType="r8"
+                      cachedName="PL"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PL]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[PL]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Price List Type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Price List Type"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Price List Type]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Price List Type]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PayT]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PayT"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PayT]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[PayT]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Recon#acct]"
+                      cachedDataType="r8"
+                      cachedName="Recon#acct"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Recon.acct]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Recon#acct]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Text:Account Assignment Group for this c]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Text:Account Assignment Group for this c"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Text:Account Assignment Group for this c]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Text:Account Assignment Group for this c]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CuPP]"
+                      cachedDataType="r8"
+                      cachedName="CuPP"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CuPP]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[CuPP]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Text:Pricing procedure assigned to this]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Text:Pricing procedure assigned to this"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Text:Pricing procedure assigned to this]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Text:Pricing procedure assigned to this]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Group"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Group]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Group]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer Account Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Customer Account Group"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer Account Group]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Customer Account Group]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[User]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="User"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[User]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[User]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Time]"
+                      cachedDataType="date"
+                      cachedName="Time"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Time]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[User1]"
+                      cachedDataType="r8"
+                      cachedName="User1"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[User.1]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[User1]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date1]"
+                      cachedDataType="date"
+                      cachedName="Date1"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date.1]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Date1]" />
+                    <inputColumn
+                      refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Region (State, Province, County)]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Region (State, Province, County)"
+                      externalMetadataColumnId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\DIM_CUSTOMER\Excel Source.Outputs[Excel Source Output].Columns[Region (State, Province, County)]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1659,8 +2731,7 @@
                       name="Customer" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Name" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DChl]"
@@ -1668,8 +2739,7 @@
                       name="DChl" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distribution Channel]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Distribution Channel" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dv]"
@@ -1677,8 +2747,7 @@
                       name="Dv" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Division]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Division" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rg]"
@@ -1686,8 +2755,7 @@
                       name="Rg" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Region" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SDst]"
@@ -1695,8 +2763,7 @@
                       name="SDst" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales district]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Sales district" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SOff.]"
@@ -1704,8 +2771,7 @@
                       name="SOff." />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Office]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Sales Office" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plnt]"
@@ -1717,18 +2783,15 @@
                       name="SGrp" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Group Text]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Sales Group Text" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rout]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Rout" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Route]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Route" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CGrp]"
@@ -1736,38 +2799,31 @@
                       name="CGrp" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer group]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Customer group" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Clus]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Clus" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cluster]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Cluster" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Chan]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Chan" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Channel" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Segm]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Segm" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Segmentation]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Segmentation" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PL]"
@@ -1775,13 +2831,11 @@
                       name="PL" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Price List Type]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Price List Type" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PayT]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PayT" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Recon.acct]"
@@ -1789,8 +2843,7 @@
                       name="Recon.acct" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Text:Account Assignment Group for this c]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Text:Account Assignment Group for this c" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CuPP]"
@@ -1798,23 +2851,19 @@
                       name="CuPP" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Text:Pricing procedure assigned to this]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Text:Pricing procedure assigned to this" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Group]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Group" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer Account Group]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Customer Account Group" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[User]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="User" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
@@ -1823,12 +2872,12 @@
                       scale="7" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[User.1]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="User.1" />
                     <externalMetadataColumn
                       refId="Package\DIM_CUSTOMER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date.1]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="1"
                       name="Date.1" />
                   </externalMetadataColumns>
                 </input>
@@ -4501,7 +5550,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_CONVERSION_RATE"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4518,12 +5567,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_CUSTOMER"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE dim.DIM_CUSTOMER" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="/****** Object:  Table [dim].[DIM_CUSTOMER]    Script Date: 4/26/2021 12:00:24 PM ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dim].[DIM_CUSTOMER]') AND type in (N'U'))&#xA;DROP TABLE [dim].[DIM_CUSTOMER]&#xA;GO&#xA;&#xA;/****** Object:  Table [dim].[DIM_CUSTOMER]    Script Date: 4/26/2021 12:00:24 PM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [dim].[DIM_CUSTOMER](&#xA;&#x9;[Customer] [bigint] NULL,&#xA;&#x9;[Name] [nvarchar](max) NULL,&#xA;&#x9;[DChl] [bigint] NULL,&#xA;&#x9;[Distribution Channel] [nvarchar](max) NULL,&#xA;&#x9;[Dv] [bigint] NULL,&#xA;&#x9;[Division] [nvarchar](max) NULL,&#xA;&#x9;[Rg] [bigint] NULL,&#xA;&#x9;[Region] [nvarchar](max) NULL,&#xA;&#x9;[SDst] [bigint] NULL,&#xA;&#x9;[Sales district] [nvarchar](max) NULL,&#xA;&#x9;[SOff.] [bigint] NULL,&#xA;&#x9;[Sales Office] [nvarchar](max) NULL,&#xA;&#x9;[Plnt] [bigint] NULL,&#xA;&#x9;[SGrp] [bigint] NULL,&#xA;&#x9;[Sales Group Text] [nvarchar](max) NULL,&#xA;&#x9;[Rout] [nvarchar](max) NULL,&#xA;&#x9;[Route] [nvarchar](max) NULL,&#xA;&#x9;[CGrp] [bigint] NULL,&#xA;&#x9;[Customer group] [nvarchar](max) NULL,&#xA;&#x9;[Clus] [nvarchar](max) NULL,&#xA;&#x9;[Cluster] [nvarchar](max) NULL,&#xA;&#x9;[Chan] [nvarchar](max) NULL,&#xA;&#x9;[Channel] [nvarchar](max) NULL,&#xA;&#x9;[Segm] [nvarchar](max) NULL,&#xA;&#x9;[Segmentation] [nvarchar](max) NULL,&#xA;&#x9;[PL] [bigint] NULL,&#xA;&#x9;[Price List Type] [nvarchar](max) NULL,&#xA;&#x9;[PayT] [nvarchar](max) NULL,&#xA;&#x9;[Recon.acct] [float] NULL,&#xA;&#x9;[Text:Account Assignment Group for this c] [nvarchar](max) NULL,&#xA;&#x9;[CuPP] [bigint] NULL,&#xA;&#x9;[Text:Pricing procedure assigned to this] [nvarchar](max) NULL,&#xA;&#x9;[Group] [nvarchar](max) NULL,&#xA;&#x9;[Customer Account Group] [nvarchar](max) NULL,&#xA;&#x9;[User] [nvarchar](max) NULL,&#xA;&#x9;[Date] [datetime] NULL,&#xA;&#x9;[Time] [time](7) NULL,&#xA;&#x9;[User.1] [nvarchar](max) NULL,&#xA;&#x9;[Date.1] [nvarchar] NULL&#xA;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -4535,7 +5584,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate DIM_ROUTES_NAME"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5627,7 +6676,7 @@
     design-time-name="Package\DIM_CUSTOMER">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\DIM_CUSTOMER\OLE DB Destination"
@@ -5667,9 +6716,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6089,7 +7136,7 @@
     design-time-name="Package\DIM_SKUS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\DIM_SKUS\OLE DB Destination"
@@ -6129,7 +7176,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
