@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{BAC7A496-09A6-4C2D-BE19-FC13FE6162E5}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{0082745C-CC94-42F9-BAA2-44D5AFF43D86}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -867,11 +867,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150.666666666667,41.3333333333334"
           Id="Package\Data Flow Task"
           TopLeft="130.714287940337,166.705884690928" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162.666666666667,41.3333333333334"
           Id="Package\Execute SQL Task"
           TopLeft="108.571430420389,22.9411767923296" />
         <EdgeLayout
@@ -915,13 +915,13 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="170.4,41.6"
+          Size="170.666666666667,41.3333333333334"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="154.285716913184,143.764707898599" />
         <NodeLayout
-          Size="138.4,41.6"
+          Size="138.666666666667,41.3333333333334"
           Id="Package\Data Flow Task\Excel Source"
           TopLeft="128.571430760987,48.1764712638921" />
         <EdgeLayout
@@ -955,9 +955,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
