@@ -8,7 +8,7 @@
       DTS:ConnectionString="Data Source=10.250.2.14;User ID=coke_bi;Initial Catalog=COKE_BI;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqSHj2xV00U2zjM3vKsSRGwAAAAACAAAAAAADZgAAwAAAABAAAACW2WYhRtda6BtWnBKNS655AAAAAASAAACgAAAAEAAAAGoVJLJOa2yL/LDPmnmbJy54AAAAcX8B7Ggnlod5AGqUw8521qH8hX8j3QlaTvD+ACY3T3KqM8u3caawYTLv5ymWj0eMMjIAEhe/f4GcVDhYOs0zJm+ZGqqqXBPFQsDm+9lrf7fWNsNdksgbXSLbSbjsgFWHfdgzW1hl9naiPLYHOLqPEkl6TSNZOsnCFAAAAKm6duzCXs8XnLyuvontv9zA83k/</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2AFfHyfFdkClsy/gj6oXNQAAAAACAAAAAAADZgAAwAAAABAAAAA0PXcktNdDCEJJrc7mtfVlAAAAAASAAACgAAAAEAAAAANWPC4eG0bvu2rCPDtwpzp4AAAAsebe08TpjevuQvbNgJD51yfZgod3E4TJmlB8cdNGDp6mXLtkGUI8+ZCKx9ZZvxyJmcmTAB0wq+ocvc9PtSYHCASDKCMBm8yb7VkAQFeUPq4cXXGWLGfOJQvrb6b496HAKOdVJ7LgIrpqWiwsbzqeZc1SPVYQQKRUFAAAALC4ipIJpf7Yd5SmM7k8c5YfsEkR</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

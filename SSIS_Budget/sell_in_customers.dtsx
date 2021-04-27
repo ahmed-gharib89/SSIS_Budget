@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{0082745C-CC94-42F9-BAA2-44D5AFF43D86}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{9EA6B185-FD20-4B05-9753-66C1AAE92CC8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -209,20 +209,20 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Per1]"
-                      dataType="wstr"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Per1]"
-                      length="255"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Per1]"
                       name="Per1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Per2]"
-                      dataType="r8"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Per2]"
+                      length="255"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Per2]"
                       name="Per2"
                       truncationRowDisposition="FailComponent" />
@@ -246,11 +246,10 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Prior]"
-                      dataType="wstr"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Prior]"
-                      length="255"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Prior]"
                       name="Prior"
                       truncationRowDisposition="FailComponent" />
@@ -338,12 +337,12 @@
                       name="FirstSales" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Per1]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="r8"
                       name="Per1" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Per2]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       name="Per2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Per3]"
@@ -355,8 +354,7 @@
                       name="SplitFromPeriod" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Prior]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="r8"
                       name="Prior" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NewContract]"
@@ -443,13 +441,13 @@
                       name="FirstSales" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Per1]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="r8"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Per1]"
                       name="Per1" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Per2]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Per2]"
                       name="Per2" />
                     <outputColumn
@@ -464,8 +462,7 @@
                       name="SplitFromPeriod" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Prior]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="r8"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Prior]"
                       name="Prior" />
                     <outputColumn
@@ -650,14 +647,14 @@
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FirstSales]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Per1]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedDataType="r8"
                       cachedName="Per1"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Per1]"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Per1]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Per2]"
-                      cachedDataType="r8"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="Per2"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Per2]"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Per2]" />
@@ -675,8 +672,7 @@
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SplitFromPeriod]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Prior]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedDataType="r8"
                       cachedName="Prior"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Prior]"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Prior]" />
@@ -704,15 +700,15 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
-                      dataType="r8"
+                      dataType="i4"
                       name="Region" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales District]"
-                      dataType="r8"
+                      dataType="i4"
                       name="Sales District" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales office]"
-                      dataType="r8"
+                      dataType="i4"
                       name="Sales office" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Route]"
@@ -721,7 +717,7 @@
                       name="Route" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
-                      dataType="r8"
+                      dataType="i8"
                       name="Customer" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer Name]"
@@ -730,24 +726,23 @@
                       name="Customer Name" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RGB]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="i4"
                       name="RGB" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NRB]"
-                      dataType="r8"
+                      dataType="i4"
                       name="NRB" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
-                      dataType="r8"
+                      dataType="i4"
                       name="Contract" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distribution Channel]"
-                      dataType="r8"
+                      dataType="i4"
                       name="Distribution Channel" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Group]"
-                      dataType="r8"
+                      dataType="i4"
                       name="Sales Group" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FirstSales]"
@@ -755,20 +750,25 @@
                       name="FirstSales" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Per1]"
-                      dataType="wstr"
-                      length="255"
-                      name="Per1" />
+                      dataType="numeric"
+                      name="Per1"
+                      precision="18"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Per2]"
-                      dataType="r8"
-                      name="Per2" />
+                      dataType="numeric"
+                      name="Per2"
+                      precision="18"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Per3]"
-                      dataType="r8"
-                      name="Per3" />
+                      dataType="numeric"
+                      name="Per3"
+                      precision="18"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SplitFromPeriod]"
-                      dataType="r8"
+                      dataType="i4"
                       name="SplitFromPeriod" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Prior]"
@@ -777,16 +777,22 @@
                       name="Prior" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NewContract]"
-                      dataType="r8"
-                      name="NewContract" />
+                      dataType="numeric"
+                      name="NewContract"
+                      precision="18"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NewRGB]"
-                      dataType="i4"
-                      name="NewRGB" />
+                      dataType="numeric"
+                      name="NewRGB"
+                      precision="18"
+                      scale="2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NewNRB]"
-                      dataType="r8"
-                      name="NewNRB" />
+                      dataType="numeric"
+                      name="NewNRB"
+                      precision="18"
+                      scale="2" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -867,11 +873,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,41.3333333333334"
+          Size="150.4,41.6"
           Id="Package\Data Flow Task"
           TopLeft="130.714287940337,166.705884690928" />
         <NodeLayout
-          Size="162.666666666667,41.3333333333334"
+          Size="162.4,41.6"
           Id="Package\Execute SQL Task"
           TopLeft="108.571430420389,22.9411767923296" />
         <EdgeLayout
@@ -917,11 +923,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="170.666666666667,41.3333333333334"
+          Size="170.4,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="154.285716913184,143.764707898599" />
         <NodeLayout
-          Size="138.666666666667,41.3333333333334"
+          Size="138.4,41.6"
           Id="Package\Data Flow Task\Excel Source"
           TopLeft="128.571430760987,48.1764712638921" />
         <EdgeLayout

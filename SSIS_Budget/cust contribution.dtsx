@@ -11,9 +11,299 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionGUID="{473D8493-6996-4D02-90C3-A189D9AE57E3}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{9D1FEA81-E70B-46E1-AB15-D6F97F72A9A1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Insert data into cust contr"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9843FB2A-5043-4FE3-8287-5667669E804A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert data into cust contr"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="WITH d as (&#xA;    SELECT &#xA;        [Sdistrict]&#xA;        ,[SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[RECORD_UID]&#xA;        ,[CUSTOMER]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;        ,SUM([ACT_GSR]) AS [ACT_GSR]&#xA;        ,SUM([ACT_UC]) AS [ACT_UC]&#xA;    FROM &#xA;        [dbo].[SALES]&#xA;    WHERE&#xA;        [CALENDAR_DATE] &lt; '2021-04-03'&#xA;    GROUP BY &#xA;        [Sdistrict]&#xA;        ,[SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[RECORD_UID]&#xA;        ,[CUSTOMER]&#xA;        ,[SKU_CODE]&#xA;),&#xA;g AS (&#xA;    SELECT &#xA;        [SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;    FROM &#xA;        [dbo].[SALES]&#xA;    WHERE&#xA;        [CALENDAR_DATE] &lt; '2021-04-03'&#xA;    GROUP BY &#xA;        [SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;)&#xA;&#xA;INSERT INTO calc.customer_cont&#xA;&#xA;SELECT&#xA;    d.[Sdistrict]&#xA;    ,d.[SOFF_CODE]&#xA;    ,d.[SGRP_CODE]&#xA;    ,d.[DV]&#xA;    ,d.[RECORD_UID]&#xA;    ,d.[CUSTOMER]&#xA;    ,d.[SKU_CODE]&#xA;    ,c.[Rout]&#xA;    ,c.[Segmentation]&#xA;    ,d.[ACT_PHY]&#xA;    ,d.[ACT_GSR]&#xA;    ,d.[ACT_UC]&#xA;    ,d.[ACT_PHY] / g.[ACT_PHY] AS contribution&#xA;FROM&#xA;    d&#xA;JOIN&#xA;    g&#xA;ON&#xA;    d.[SOFF_CODE] = g.[SOFF_CODE]&#xA;AND&#xA;    d.[SGRP_CODE] = g.[SGRP_CODE]&#xA;AND&#xA;    d.[DV] = g.[DV]&#xA;AND&#xA;    d.[SKU_CODE] = g.[SKU_CODE]&#xA;JOIN&#xA;&#x9;[dim].[DIM_CUSTOMER] c&#xA;ON&#xA;&#x9;d.[RECORD_UID] = c.[RECORD_UID]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert into bpre sales office"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FAC5DB56-F809-4AFC-B524-18FC6F1D108E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert into bpre sales office"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="INSERT INTO [bud].[bpre_sales_office] &#xA;&#xA;SELECT [Period_Year]&#xA;      ,[Company Code]&#xA;      ,[Cost Element]&#xA;      ,SUM([Value in Obj. Crcy]) AS [Value in Obj. Crcy]&#xA;      ,SUM([Total Quantity]) AS [Total Quantity]&#xA;      ,[Product]&#xA;      ,[Sales District]&#xA;      ,[Region]&#xA;      ,[Plant]&#xA;      ,[Sales office]&#xA;      ,[Distribution Channel]&#xA;      ,[Sales Group]&#xA;      ,[BP|RE]&#xA;  FROM &#xA;    [COKE_BI].[bud].[bpre]&#xA;  GROUP BY&#xA;     [Period_Year]&#xA;    ,[Company Code]&#xA;    ,[Cost Element]&#xA;    ,[Product]&#xA;    ,[Sales District]&#xA;    ,[Region]&#xA;    ,[Plant]&#xA;    ,[Sales office]&#xA;    ,[Distribution Channel]&#xA;    ,[Sales Group]&#xA;    ,[BP|RE]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert into route contribution"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{252510D8-603D-40DF-B49E-6DD8C917E0A0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert into route contribution"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="&#xA;WITH d as (&#xA;    SELECT &#xA;        [Sdistrict]&#xA;        ,[SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;&#x9;&#x9;,[Rout]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;        ,SUM([ACT_GSR]) AS [ACT_GSR]&#xA;        ,SUM([ACT_UC]) AS [ACT_UC]&#xA;    FROM &#xA;        [calc].[customer_cont]&#xA;    GROUP BY &#xA;        [Sdistrict]&#xA;        ,[SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;&#x9;&#x9;,[Rout]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;),&#xA;g AS (&#xA;    SELECT &#xA;        [SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;    FROM &#xA;        [calc].[customer_cont]&#xA;    GROUP BY &#xA;        [SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;)&#xA;&#xA;INSERT INTO calc.route_cont&#xA;&#xA;SELECT&#xA;    d.[Sdistrict]&#xA;    ,d.[SOFF_CODE]&#xA;    ,d.[SGRP_CODE]&#xA;    ,d.[DV]&#xA;    ,d.[SKU_CODE]&#xA;    ,d.[Rout]&#xA;    ,d.[ACT_PHY]&#xA;    ,d.[ACT_GSR]&#xA;    ,d.[ACT_UC]&#xA;    ,d.[ACT_PHY] / g.[ACT_PHY] AS contribution&#xA;FROM&#xA;    d&#xA;JOIN&#xA;    g&#xA;ON&#xA;    d.[SOFF_CODE] = g.[SOFF_CODE]&#xA;AND&#xA;    d.[SGRP_CODE] = g.[SGRP_CODE]&#xA;AND&#xA;    d.[DV] = g.[DV]&#xA;AND&#xA;    d.[SKU_CODE] = g.[SKU_CODE]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate table bpre sales office"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{52516192-4D7B-4915-8E5E-85EFF3865BC3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate table bpre sales office"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="/****** Object:  Table [bud].[bpre_sales_office]    Script Date: 4/26/2021 3:16:31 PM ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[bud].[bpre_sales_office]') AND type in (N'U'))&#xA;DROP TABLE [bud].[bpre_sales_office]&#xA;GO&#xA;&#xA;/****** Object:  Table [bud].[bpre_sales_office]    Script Date: 4/26/2021 3:16:31 PM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [bud].[bpre_sales_office](&#xA;&#x9;[Period_Year] [float] NULL,&#xA;&#x9;[Company Code] [int] NULL,&#xA;&#x9;[Cost Element] [bigint] NULL,&#xA;&#x9;[Value in Obj. Crcy] [money] NULL,&#xA;&#x9;[Total Quantity] [float] NULL,&#xA;&#x9;[Product] [bigint] NULL,&#xA;&#x9;[Sales District] [int] NULL,&#xA;&#x9;[Region] [int] NULL,&#xA;&#x9;[Plant] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Distribution Channel] [int] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[BP|RE] [varchar](10) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate table cust contr"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1B8B0311-5DC2-4BD4-9D2C-D5B43FD590B6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate table cust contr"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="&#xA;&#x9;/****** Object:  Table [calc].[customer_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[customer_cont]') AND type in (N'U'))&#xA;&#x9;DROP TABLE [calc].[customer_cont]&#xA;&#x9;GO&#xA;&#xA;&#x9;/****** Object:  Table [calc].[customer_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;SET ANSI_NULLS ON&#xA;&#x9;GO&#xA;&#xA;&#x9;SET QUOTED_IDENTIFIER ON&#xA;&#x9;GO&#xA;&#xA;&#x9;CREATE TABLE [calc].[customer_cont](&#xA;&#x9;&#x9;[Sdistrict] [bigint] NULL,&#xA;&#x9;&#x9;[SOFF_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[SGRP_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[DV] [bigint] NULL,&#xA;&#x9;&#x9;[RECORD_UID] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[CUSTOMER] [bigint] NULL,&#xA;&#x9;&#x9;[SKU_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[Rout] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[Segmentation] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[ACT_PHY] [float] NULL,&#xA;&#x9;&#x9;[ACT_GSR] [float] NULL,&#xA;&#x9;&#x9;[ACT_UC] [float] NULL,&#xA;&#x9;&#x9;[contribution] [float] NULL&#xA;&#x9;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;&#x9;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate table route contribution"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CBBB9B65-CFEE-4697-90F4-5AE9AD2A7D31}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate table route contribution"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="/****** Object:  Table [calc].[route_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[route_cont]') AND type in (N'U'))&#xA;&#x9;DROP TABLE [calc].[route_cont]&#xA;&#x9;GO&#xA;&#xA;&#x9;/****** Object:  Table [calc].[route_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;SET ANSI_NULLS ON&#xA;&#x9;GO&#xA;&#xA;&#x9;SET QUOTED_IDENTIFIER ON&#xA;&#x9;GO&#xA;&#xA;&#x9;CREATE TABLE [calc].[route_cont](&#xA;&#x9;&#x9;[Sdistrict] [bigint] NULL,&#xA;&#x9;&#x9;[SOFF_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[SGRP_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[DV] [bigint] NULL,&#xA;&#x9;&#x9;[SKU_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[Rout] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[ACT_PHY] [float] NULL,&#xA;&#x9;&#x9;[ACT_GSR] [float] NULL,&#xA;&#x9;&#x9;[ACT_UC] [float] NULL,&#xA;&#x9;&#x9;[contribution] [float] NULL&#xA;&#x9;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;&#x9;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{721E0B0C-E4C3-4415-9F66-AB702B34F2C5}"
+      DTS:From="Package\Truncate table cust contr"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Insert data into cust contr" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{78D375E3-6B99-4762-9180-6DAF13C7038A}"
+      DTS:From="Package\Insert data into cust contr"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Truncate table route contribution" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{A499A411-DE7E-4D5C-8A9C-A0CC34D16DDB}"
+      DTS:From="Package\Truncate table route contribution"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Insert into route contribution" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{B6C25A4C-7240-44C3-B970-039ED59732E8}"
+      DTS:From="Package\Truncate table bpre sales office"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Insert into bpre sales office" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="196.666666666667,42.6666666666667"
+          Id="Package\Truncate table cust contr"
+          TopLeft="75.6249988730997,16.4210529406645" />
+        <NodeLayout
+          Size="198.666666666667,42.6666666666667"
+          Id="Package\Insert data into cust contr"
+          TopLeft="77.4999988451601,73.210527693796" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="75.6249988730997,37.7543862739979">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="1.87499997206041,56.7894747531315"
+              Start="0,0"
+              End="-5.62500002793959,56.7894747531315">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,52.7894747531315" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,52.7894747531315"
+                    Point2="-22.5,56.7894747531315"
+                    Point3="-18.5,56.7894747531315" />
+                  <mssgle:LineSegment
+                    End="-5.62500002793959,56.7894747531315" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\Truncate table route contribution"
+          TopLeft="63.7499990500509,155.315792397119" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="178.624998947605,115.877194360463">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.438598036656"
+              Start="0,0"
+              End="0,31.938598036656">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.938598036656" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="212,42.6666666666667"
+          Id="Package\Insert into route contribution"
+          TopLeft="108.749998379499,250.421057345134" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="180.416665716718,197.982459063785">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.3333326627811,52.4385982813488"
+              Start="0,0"
+              End="34.3333326627811,44.9385982813488">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2192991406744" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2192991406744"
+                    Point2="0,26.2192991406744"
+                    Point3="4,26.2192991406744" />
+                  <mssgle:LineSegment
+                    End="30.3333326627811,26.2192991406744" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.3333326627811,26.2192991406744"
+                    Point2="34.3333326627811,26.2192991406744"
+                    Point3="34.3333326627811,30.2192991406744" />
+                  <mssgle:LineSegment
+                    End="34.3333326627811,44.9385982813488" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\Insert into bpre sales office"
+          TopLeft="339.999994933605,127.947370829345" />
+        <NodeLayout
+          Size="228,42.6666666666667"
+          Id="Package\Truncate table bpre sales office"
+          TopLeft="329.37499509193,22.5789477934137" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="443.354161679434,65.2456144600804">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.7017563692641"
+              Start="0,0"
+              End="0,55.2017563692641">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.2017563692641" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
