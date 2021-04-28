@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{9D1FEA81-E70B-46E1-AB15-D6F97F72A9A1}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{67001F90-B98F-4C68-92A4-629B047F0B33}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -31,7 +31,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="WITH d as (&#xA;    SELECT &#xA;        [Sdistrict]&#xA;        ,[SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[RECORD_UID]&#xA;        ,[CUSTOMER]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;        ,SUM([ACT_GSR]) AS [ACT_GSR]&#xA;        ,SUM([ACT_UC]) AS [ACT_UC]&#xA;    FROM &#xA;        [dbo].[SALES]&#xA;    WHERE&#xA;        [CALENDAR_DATE] &lt; '2021-04-03'&#xA;    GROUP BY &#xA;        [Sdistrict]&#xA;        ,[SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[RECORD_UID]&#xA;        ,[CUSTOMER]&#xA;        ,[SKU_CODE]&#xA;),&#xA;g AS (&#xA;    SELECT &#xA;        [SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;    FROM &#xA;        [dbo].[SALES]&#xA;    WHERE&#xA;        [CALENDAR_DATE] &lt; '2021-04-03'&#xA;    GROUP BY &#xA;        [SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;)&#xA;&#xA;INSERT INTO calc.customer_cont&#xA;&#xA;SELECT&#xA;    d.[Sdistrict]&#xA;    ,d.[SOFF_CODE]&#xA;    ,d.[SGRP_CODE]&#xA;    ,d.[DV]&#xA;    ,d.[RECORD_UID]&#xA;    ,d.[CUSTOMER]&#xA;    ,d.[SKU_CODE]&#xA;    ,c.[Rout]&#xA;    ,c.[Segmentation]&#xA;    ,d.[ACT_PHY]&#xA;    ,d.[ACT_GSR]&#xA;    ,d.[ACT_UC]&#xA;    ,d.[ACT_PHY] / g.[ACT_PHY] AS contribution&#xA;FROM&#xA;    d&#xA;JOIN&#xA;    g&#xA;ON&#xA;    d.[SOFF_CODE] = g.[SOFF_CODE]&#xA;AND&#xA;    d.[SGRP_CODE] = g.[SGRP_CODE]&#xA;AND&#xA;    d.[DV] = g.[DV]&#xA;AND&#xA;    d.[SKU_CODE] = g.[SKU_CODE]&#xA;JOIN&#xA;&#x9;[dim].[DIM_CUSTOMER] c&#xA;ON&#xA;&#x9;d.[RECORD_UID] = c.[RECORD_UID]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;WITH d as (&#xA;    SELECT &#xA;         c.[SDst]&#xA;        ,c.[SOff.]&#xA;        ,c.[Rout]&#xA;        ,c.[Segmentation]&#xA;        ,c.[Channel]&#xA;        ,c.[DV]&#xA;        ,c.[DChl]&#xA;        ,c.[SGrp]&#xA;        ,s.[RECORD_UID]&#xA;        ,s.[CUSTOMER]&#xA;        ,s.[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;    FROM &#xA;        [dbo].[SALES] AS s&#xA;    JOIN&#xA;        dim.[DIM_CUSTOMER] AS c&#xA;    ON  &#xA;        s.[RECORD_UID] = c.[RECORD_UID]&#xA;    GROUP BY &#xA;         c.[SDst]&#xA;        ,c.[SOff.]&#xA;        ,c.[Rout]&#xA;        ,c.[Segmentation]&#xA;        ,c.[Channel]&#xA;        ,c.[DV]&#xA;        ,c.[DChl]&#xA;        ,c.[SGrp]&#xA;        ,s.[RECORD_UID]&#xA;        ,s.[CUSTOMER]&#xA;        ,s.[SKU_CODE]&#xA;),&#xA;g AS (&#xA;    SELECT &#xA;         c.[SOff.]&#xA;        ,c.[SGrp]&#xA;        ,s.[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;    FROM &#xA;        [dbo].[SALES] AS s&#xA;    JOIN&#xA;        dim.[DIM_CUSTOMER] AS c&#xA;    ON  &#xA;        s.[RECORD_UID] = c.[RECORD_UID]&#xA;    GROUP BY &#xA;         c.[SOff.]&#xA;        ,c.[SGrp]&#xA;        ,s.[SKU_CODE]&#xA;)&#xA;&#xA;INSERT INTO calc.customer_cont&#xA;&#xA;SELECT&#xA;     d.[SDst]&#xA;    ,d.[SOff.]&#xA;    ,d.[Rout]&#xA;    ,d.[Segmentation]&#xA;    ,d.[Channel]&#xA;    ,d.[DV]&#xA;    ,d.[DChl]&#xA;    ,d.[SGrp]&#xA;    ,d.[RECORD_UID]&#xA;    ,d.[CUSTOMER]&#xA;    ,d.[SKU_CODE]&#xA;    ,d.[ACT_PHY]&#xA;    ,d.[ACT_PHY] / g.[ACT_PHY] AS [contribution]&#xA;FROM&#xA;    d&#xA;JOIN&#xA;    g&#xA;ON&#xA;    d.[SOff.] = g.[SOff.]&#xA;AND&#xA;    d.[SGrp] = g.[SGrp]&#xA;AND&#xA;    d.[SKU_CODE] = g.[SKU_CODE]&#xA;AND&#xA;    d.[SKU_CODE] = g.[SKU_CODE]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -48,7 +48,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="INSERT INTO [bud].[bpre_sales_office] &#xA;&#xA;SELECT [Period_Year]&#xA;      ,[Company Code]&#xA;      ,[Cost Element]&#xA;      ,SUM([Value in Obj. Crcy]) AS [Value in Obj. Crcy]&#xA;      ,SUM([Total Quantity]) AS [Total Quantity]&#xA;      ,[Product]&#xA;      ,[Sales District]&#xA;      ,[Region]&#xA;      ,[Plant]&#xA;      ,[Sales office]&#xA;      ,[Distribution Channel]&#xA;      ,[Sales Group]&#xA;      ,[BP|RE]&#xA;  FROM &#xA;    [COKE_BI].[bud].[bpre]&#xA;  GROUP BY&#xA;     [Period_Year]&#xA;    ,[Company Code]&#xA;    ,[Cost Element]&#xA;    ,[Product]&#xA;    ,[Sales District]&#xA;    ,[Region]&#xA;    ,[Plant]&#xA;    ,[Sales office]&#xA;    ,[Distribution Channel]&#xA;    ,[Sales Group]&#xA;    ,[BP|RE]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;INSERT INTO [bud].[bpre_reroute_based_cust_cont]&#xA;&#xA;/****** Script for SelectTopNRows command from SSMS  ******/&#xA;SELECT &#xA;     s.[Period_Year]&#xA;    ,s.[Company Code]&#xA;    ,s.[Cost Element]&#xA;    ,s.[Value in Obj. Crcy] * r.[contribution] AS [Value in Obj. Crcy]&#xA;    ,s.[Total Quantity] * r.[contribution] AS [Total Quantity]&#xA;    ,s.[Product]&#xA;    ,s.[Sales District]&#xA;    ,r.[Rout] AS [Route]&#xA;    ,s.[Region]&#xA;    ,s.[Plant]&#xA;    ,s.[Sales office]&#xA;    ,s.[Distribution Channel]&#xA;    ,NULL AS [Customer]&#xA;    ,s.[Sales Group]&#xA;    ,s.[BP|RE]&#xA;FROM &#xA;    [bud].[bpre_sales_office] AS s&#xA;JOIN&#xA;    [calc].[route_cont] AS r&#xA;ON&#xA;    s.[Sales District] = r.[SDst]&#xA;AND&#xA;    s.[Sales office] = r.[SOff.]&#xA;AND&#xA;    s.[Sales Group] = r.[SGrp]&#xA;AND&#xA;    s.[Product] = r.[SKU_CODE]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -65,7 +65,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="&#xA;WITH d as (&#xA;    SELECT &#xA;        [Sdistrict]&#xA;        ,[SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;&#x9;&#x9;,[Rout]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;        ,SUM([ACT_GSR]) AS [ACT_GSR]&#xA;        ,SUM([ACT_UC]) AS [ACT_UC]&#xA;    FROM &#xA;        [calc].[customer_cont]&#xA;    GROUP BY &#xA;        [Sdistrict]&#xA;        ,[SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;&#x9;&#x9;,[Rout]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;),&#xA;g AS (&#xA;    SELECT &#xA;        [SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;    FROM &#xA;        [calc].[customer_cont]&#xA;    GROUP BY &#xA;        [SOFF_CODE]&#xA;        ,[SGRP_CODE]&#xA;        ,[DV]&#xA;        ,[SKU_CODE]&#xA;)&#xA;&#xA;INSERT INTO calc.route_cont&#xA;&#xA;SELECT&#xA;    d.[Sdistrict]&#xA;    ,d.[SOFF_CODE]&#xA;    ,d.[SGRP_CODE]&#xA;    ,d.[DV]&#xA;    ,d.[SKU_CODE]&#xA;    ,d.[Rout]&#xA;    ,d.[ACT_PHY]&#xA;    ,d.[ACT_GSR]&#xA;    ,d.[ACT_UC]&#xA;    ,d.[ACT_PHY] / g.[ACT_PHY] AS contribution&#xA;FROM&#xA;    d&#xA;JOIN&#xA;    g&#xA;ON&#xA;    d.[SOFF_CODE] = g.[SOFF_CODE]&#xA;AND&#xA;    d.[SGRP_CODE] = g.[SGRP_CODE]&#xA;AND&#xA;    d.[DV] = g.[DV]&#xA;AND&#xA;    d.[SKU_CODE] = g.[SKU_CODE]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;WITH d as (&#xA;    SELECT &#xA;         [SDst]&#xA;        ,[SOff.]&#xA;        ,[SGrp]&#xA;&#x9;&#x9;,[Rout]&#xA;        -- ,[DV]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;    FROM &#xA;        [calc].[customer_cont]&#xA;    GROUP BY &#xA;         [SDst]&#xA;        ,[SOff.]&#xA;        ,[SGrp]&#xA;&#x9;&#x9;,[Rout]&#xA;        -- ,[DV]&#xA;        ,[SKU_CODE]&#xA;),&#xA;g AS (&#xA;    SELECT &#xA;         [SOff.]&#xA;        ,[SGrp]&#xA;        -- ,[DV]&#xA;        ,[SKU_CODE]&#xA;        ,SUM([ACT_PHY]) AS [ACT_PHY]&#xA;    FROM &#xA;        [calc].[customer_cont]&#xA;    GROUP BY &#xA;         [SOff.]&#xA;        ,[SGrp]&#xA;        -- ,[DV]&#xA;        ,[SKU_CODE]&#xA;)&#xA;&#xA;INSERT INTO calc.route_cont&#xA;&#xA;SELECT&#xA;    d.[SDst]&#xA;    ,d.[SOff.]&#xA;    ,d.[SGrp]&#xA;    -- ,d.[DV]&#xA;    ,d.[SKU_CODE]&#xA;    ,d.[Rout]&#xA;    ,d.[ACT_PHY]&#xA;    ,d.[ACT_PHY] / g.[ACT_PHY] AS contribution&#xA;FROM&#xA;    d&#xA;JOIN&#xA;    g&#xA;ON&#xA;    d.[SOff.] = g.[SOff.]&#xA;AND&#xA;    d.[SGrp] = g.[SGrp]&#xA;-- AND&#xA;--     d.[DV] = g.[DV]&#xA;AND&#xA;    d.[SKU_CODE] = g.[SKU_CODE]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -82,7 +82,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="/****** Object:  Table [bud].[bpre_sales_office]    Script Date: 4/26/2021 3:16:31 PM ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[bud].[bpre_sales_office]') AND type in (N'U'))&#xA;DROP TABLE [bud].[bpre_sales_office]&#xA;GO&#xA;&#xA;/****** Object:  Table [bud].[bpre_sales_office]    Script Date: 4/26/2021 3:16:31 PM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [bud].[bpre_sales_office](&#xA;&#x9;[Period_Year] [float] NULL,&#xA;&#x9;[Company Code] [int] NULL,&#xA;&#x9;[Cost Element] [bigint] NULL,&#xA;&#x9;[Value in Obj. Crcy] [money] NULL,&#xA;&#x9;[Total Quantity] [float] NULL,&#xA;&#x9;[Product] [bigint] NULL,&#xA;&#x9;[Sales District] [int] NULL,&#xA;&#x9;[Region] [int] NULL,&#xA;&#x9;[Plant] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Distribution Channel] [int] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[BP|RE] [varchar](10) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="/****** Object:  Table [bud].[bpre_reroute_based_cust_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[bud].[bpre_reroute_based_cust_cont]') AND type in (N'U'))&#xA;&#x9;DROP TABLE [bud].[bpre_reroute_based_cust_cont]&#xA;&#x9;GO&#xA;&#xA;/****** Object:  Table [bud].[bpre_reroute_based_cust_cont]    Script Date: 4/26/2021 3:28:22 PM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [bud].[bpre_reroute_based_cust_cont](&#xA;&#x9;[Period_Year] [float] NULL,&#xA;&#x9;[Company Code] [int] NULL,&#xA;&#x9;[Cost Element] [bigint] NULL,&#xA;&#x9;[Value in Obj. Crcy] [money] NULL,&#xA;&#x9;[Total Quantity] [float] NULL,&#xA;&#x9;[Product] [bigint] NULL,&#xA;&#x9;[Sales District] [int] NULL,&#xA;&#x9;[Route] [varchar](10) NULL,&#xA;&#x9;[Region] [int] NULL,&#xA;&#x9;[Plant] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Distribution Channel] [int] NULL,&#xA;&#x9;[Customer] [bigint] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[BP|RE] [varchar](10) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -99,7 +99,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="&#xA;&#x9;/****** Object:  Table [calc].[customer_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[customer_cont]') AND type in (N'U'))&#xA;&#x9;DROP TABLE [calc].[customer_cont]&#xA;&#x9;GO&#xA;&#xA;&#x9;/****** Object:  Table [calc].[customer_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;SET ANSI_NULLS ON&#xA;&#x9;GO&#xA;&#xA;&#x9;SET QUOTED_IDENTIFIER ON&#xA;&#x9;GO&#xA;&#xA;&#x9;CREATE TABLE [calc].[customer_cont](&#xA;&#x9;&#x9;[Sdistrict] [bigint] NULL,&#xA;&#x9;&#x9;[SOFF_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[SGRP_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[DV] [bigint] NULL,&#xA;&#x9;&#x9;[RECORD_UID] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[CUSTOMER] [bigint] NULL,&#xA;&#x9;&#x9;[SKU_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[Rout] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[Segmentation] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[ACT_PHY] [float] NULL,&#xA;&#x9;&#x9;[ACT_GSR] [float] NULL,&#xA;&#x9;&#x9;[ACT_UC] [float] NULL,&#xA;&#x9;&#x9;[contribution] [float] NULL&#xA;&#x9;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;&#x9;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;&#x9;/****** Object:  Table [calc].[customer_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[customer_cont]') AND type in (N'U'))&#xA;&#x9;DROP TABLE [calc].[customer_cont]&#xA;&#x9;GO&#xA;&#xA;&#x9;/****** Object:  Table [calc].[customer_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;SET ANSI_NULLS ON&#xA;&#x9;GO&#xA;&#xA;&#x9;SET QUOTED_IDENTIFIER ON&#xA;&#x9;GO&#xA;&#xA;&#x9;CREATE TABLE [calc].[customer_cont](&#xA;&#x9;&#x9;[SDst] [bigint] NULL,&#xA;&#x9;&#x9;[SOff.] [bigint] NULL,&#xA;&#x9;&#x9;[Rout] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[Segmentation] [nvarchar](max) NULL,&#xA;        [Channel] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[DV] [bigint] NULL,&#xA;        [DChl] [bigint] NULL,&#xA;&#x9;&#x9;[SGrp] [bigint] NULL,&#xA;&#x9;&#x9;[RECORD_UID] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[CUSTOMER] [bigint] NULL,&#xA;&#x9;&#x9;[SKU_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[ACT_PHY] [float] NOT NULL,&#xA;&#x9;&#x9;[contribution] [float] NOT NULL&#xA;&#x9;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;&#x9;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -116,7 +116,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
-          SQLTask:SqlStatementSource="/****** Object:  Table [calc].[route_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[route_cont]') AND type in (N'U'))&#xA;&#x9;DROP TABLE [calc].[route_cont]&#xA;&#x9;GO&#xA;&#xA;&#x9;/****** Object:  Table [calc].[route_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;SET ANSI_NULLS ON&#xA;&#x9;GO&#xA;&#xA;&#x9;SET QUOTED_IDENTIFIER ON&#xA;&#x9;GO&#xA;&#xA;&#x9;CREATE TABLE [calc].[route_cont](&#xA;&#x9;&#x9;[Sdistrict] [bigint] NULL,&#xA;&#x9;&#x9;[SOFF_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[SGRP_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[DV] [bigint] NULL,&#xA;&#x9;&#x9;[SKU_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[Rout] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[ACT_PHY] [float] NULL,&#xA;&#x9;&#x9;[ACT_GSR] [float] NULL,&#xA;&#x9;&#x9;[ACT_UC] [float] NULL,&#xA;&#x9;&#x9;[contribution] [float] NULL&#xA;&#x9;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;&#x9;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;&#x9;/****** Object:  Table [calc].[route_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[route_cont]') AND type in (N'U'))&#xA;&#x9;DROP TABLE [calc].[route_cont]&#xA;&#x9;GO&#xA;&#xA;&#x9;/****** Object:  Table [calc].[route_cont]    Script Date: 4/26/2021 2:32:58 PM ******/&#xA;&#x9;SET ANSI_NULLS ON&#xA;&#x9;GO&#xA;&#xA;&#x9;SET QUOTED_IDENTIFIER ON&#xA;&#x9;GO&#xA;&#xA;&#x9;CREATE TABLE [calc].[route_cont](&#xA;&#x9;&#x9;[SDst] [bigint] NULL,&#xA;&#x9;&#x9;[SOff.] [bigint] NULL,&#xA;&#x9;&#x9;[SGrp] [bigint] NULL,&#xA;&#x9;&#x9;-- [DV] [bigint] NULL,&#xA;&#x9;&#x9;[SKU_CODE] [bigint] NULL,&#xA;&#x9;&#x9;[Rout] [nvarchar](max) NULL,&#xA;&#x9;&#x9;[ACT_PHY] [float] NULL,&#xA;&#x9;&#x9;[contribution] [float] NULL&#xA;&#x9;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;&#x9;GO&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -167,22 +167,38 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="196.666666666667,42.6666666666667"
+          Size="198.4,42.4"
+          Id="Package\Insert data into cust contr"
+          TopLeft="77.4999988451601,74.7399394799513" />
+        <NodeLayout
+          Size="206.4,42.4"
+          Id="Package\Insert into bpre sales office"
+          TopLeft="339.999994933605,127.947370829345" />
+        <NodeLayout
+          Size="212,42.4"
+          Id="Package\Insert into route contribution"
+          TopLeft="108.749998379499,250.421057345134" />
+        <NodeLayout
+          Size="228,42.4"
+          Id="Package\Truncate table bpre sales office"
+          TopLeft="329.37499509193,22.5789477934137" />
+        <NodeLayout
+          Size="196.8,42.4"
           Id="Package\Truncate table cust contr"
           TopLeft="75.6249988730997,16.4210529406645" />
         <NodeLayout
-          Size="198.666666666667,42.6666666666667"
-          Id="Package\Insert data into cust contr"
-          TopLeft="77.4999988451601,73.210527693796" />
+          Size="233.6,42.4"
+          Id="Package\Truncate table route contribution"
+          TopLeft="63.7499990500509,155.315792397119" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="75.6249988730997,37.7543862739979">
+          TopLeft="75.6249988730997,37.6210529406645">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="1.87499997206041,56.7894747531315"
+              EndConnector="1.87499997206039,58.3188865392868"
               Start="0,0"
-              End="-5.62500002793959,56.7894747531315">
+              End="-5.62500002793961,58.3188865392868">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -193,13 +209,13 @@
                     Point2="-22.5,0"
                     Point3="-22.5,4" />
                   <mssgle:LineSegment
-                    End="-22.5,52.7894747531315" />
+                    End="-22.5,54.3188865392868" />
                   <mssgle:CubicBezierSegment
-                    Point1="-22.5,52.7894747531315"
-                    Point2="-22.5,56.7894747531315"
-                    Point3="-18.5,56.7894747531315" />
+                    Point1="-22.5,54.3188865392868"
+                    Point2="-22.5,58.3188865392868"
+                    Point3="-18.5,58.3188865392868" />
                   <mssgle:LineSegment
-                    End="-5.62500002793959,56.7894747531315" />
+                    End="-5.62500002793961,58.3188865392868" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -208,24 +224,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="233.333333333334,42.6666666666667"
-          Id="Package\Truncate table route contribution"
-          TopLeft="63.7499990500509,155.315792397119" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="178.624998947605,115.877194360463">
+          TopLeft="178.624998947605,117.139939479951">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.438598036656"
+              EndConnector="0,38.1758529171677"
               Start="0,0"
-              End="0,31.938598036656">
+              End="0,30.6758529171677">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.938598036656" />
+                    End="0,30.6758529171677" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -234,10 +246,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="212,42.6666666666667"
-          Id="Package\Insert into route contribution"
-          TopLeft="108.749998379499,250.421057345134" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="180.416665716718,197.982459063785">
@@ -272,14 +280,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="206.666666666667,42.6666666666667"
-          Id="Package\Insert into bpre sales office"
-          TopLeft="339.999994933605,127.947370829345" />
-        <NodeLayout
-          Size="228,42.6666666666667"
-          Id="Package\Truncate table bpre sales office"
-          TopLeft="329.37499509193,22.5789477934137" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="443.354161679434,65.2456144600804">
