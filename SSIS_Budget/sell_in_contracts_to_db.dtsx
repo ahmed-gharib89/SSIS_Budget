@@ -1,0 +1,1252 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/28/2021 9:52:58 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HQ_61690"
+  DTS:CreatorName="TCCBCE\61690"
+  DTS:DTSID="{602D433A-F424-44D4-85E6-5C7868D61BFA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.157"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{C65E2108-60E9-48D9-97B6-131181832DAC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{693D246D-8F35-4CE5-ADF5-8605DA6BAE51}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Budget\special_customers.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Power Query Connection Manager]"
+      DTS:CreationName="PowerQuery"
+      DTS:DTSID="{D34DB3B0-4D01-45FC-A1E5-D8B9E275B3B1}"
+      DTS:ObjectName="Power Query Connection Manager">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="[{&quot;kind&quot;:&quot;Folder&quot;,&quot;path&quot;:&quot;d:\\budget\\selli-in data&quot;,&quot;AuthenticationKind&quot;:&quot;Windows&quot;}]"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create or Drop calc sell_in_contracts"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FF5FABB6-68B8-4A17-B387-0B44026A6F2A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create or Drop calc sell_in_contracts"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="/****** Object:  Table [calc].[sell_in_contracts]    Script Date: 4/28/2021 10:15:32 AM ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[sell_in_contracts]') AND type in (N'U'))&#xA;DROP TABLE [calc].[sell_in_contracts]&#xA;GO&#xA;&#xA;/****** Object:  Table [calc].[sell_in_contracts]    Script Date: 4/28/2021 10:15:32 AM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [calc].[sell_in_contracts](&#xA;&#x9;[Customer] [bigint] NULL,&#xA;&#x9;[Customer Name] [nvarchar](max) NULL,&#xA;&#x9;[RGB] [float] NULL,&#xA;&#x9;[NRB] [float] NULL,&#xA;&#x9;[Contract] [bigint] NULL&#xA;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Drop and Create calc sell_in_cutsomers"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0090E1AA-760E-4BE6-B460-A7DFB28BDA38}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Drop and Create calc sell_in_cutsomers"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="-- Drop and Create the table&#xA;&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[sell_in_cutsomers]') AND type in (N'U'))&#xA;DROP TABLE [calc].[sell_in_cutsomers]&#xA;GO&#xA;&#xA;&#xA;CREATE TABLE [calc].[sell_in_cutsomers](&#xA;&#x9;[Region] [int] NULL,&#xA;&#x9;[Sales District] [int] NULL,&#xA;&#x9;[Sales office] [int] NULL,&#xA;&#x9;[Route] [nvarchar](10) NULL,&#xA;&#x9;[Customer] [bigint] NULL,&#xA;&#x9;[Customer Name] [nvarchar](255) NULL,&#xA;&#x9;[RGB] [float] NULL,&#xA;&#x9;[NRB] [float] NULL,&#xA;&#x9;[Contract] [bigint] NULL,&#xA;&#x9;[Distribution Channel] [int] NULL,&#xA;&#x9;[Sales Group] [int] NULL,&#xA;&#x9;[SplitFromPeriod] [int] NULL,&#xA;    [SpecialCustomer] [nvarchar] (255) NULL,&#xA;&#x9;[Prior] [float] NULL,&#xA;&#x9;[NewContract][float] NULL,&#xA;&#x9;[NewRGB] [float] NULL,&#xA;&#x9;[NewNRB] [float] NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Drop and Create calc special_customers"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{ACE8EDEF-F980-4593-8C08-AD4715E90D45}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Drop and Create calc special_customers"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="/****** Object:  Table [calc].[special_customers]    Script Date: 4/28/2021 12:10:11 PM ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[calc].[special_customers]') AND type in (N'U'))&#xA;DROP TABLE [calc].[special_customers]&#xA;GO&#xA;&#xA;/****** Object:  Table [calc].[special_customers]    Script Date: 4/28/2021 12:10:11 PM ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [calc].[special_customers](&#xA;&#x9;[Customer] [float] NULL,&#xA;&#x9;[Name 1] [nvarchar](255) NULL,&#xA;&#x9;[Customer1] [nvarchar](255) NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert Data from dim Customers and sell_in_contracts"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CAC68967-D221-457D-A730-C5FD06C0D112}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert Data from dim Customers and sell_in_contracts"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="&#xA;INSERT INTO [calc].[sell_in_cutsomers]&#xA;&#xA;SELECT &#xA;    c.[Rg] AS [Region]&#xA;    ,c.[SDst] AS [Sales District]&#xA;    ,c.[SOff.] AS [Sales office]&#xA;    ,c.[Rout] AS [Route]&#xA;    ,si.[Customer]&#xA;    ,si.[Customer Name]&#xA;    ,si.[RGB]&#xA;    ,si.[NRB]&#xA;    ,si.[Contract]&#xA;    ,51 AS [Distribution Channel]&#xA;    ,106 AS [Sales Group]&#xA;    ,CASE WHEN MIN(sa.[CALENDAR_DATE]) &lt;= '2021-01-29' THEN 1&#xA;        WHEN  MIN(sa.[CALENDAR_DATE]) &lt;= '2021-02-26' THEN 2&#xA;        ELSE 3&#xA;    END AS [SplitFromPeriod]&#xA;    ,sc.[Customer1] AS [SpecialCustomer]&#xA;    ,NULL AS [Prior]&#xA;&#x9;,NULL AS [NewContract]&#xA;&#x9;,NULL AS [NewRGB]&#xA;&#x9;,NULL AS [NewNRB]&#xA;FROM&#xA;    [calc].[sell_in_contracts] AS si&#xA;JOIN&#xA;    [dim].[DIM_CUSTOMER] AS c&#xA;ON&#xA;    CONCAT(si.[Customer], ' ::: 10 ::: 51') = c.[RECORD_UID]&#xA;LEFT JOIN&#xA;    [dbo].[SALES] AS sa&#xA;ON&#xA;    CONCAT(si.[Customer], ' ::: 10 ::: 51') = sa.[RECORD_UID]&#xA;LEFT JOIN&#xA;    [calc].[special_customers] AS sc&#xA;ON&#xA;    si.[Customer] = sc.[Customer]&#xA;WHERE&#xA;    [Customer order block (sales area)] &lt;&gt; 'Overall block'&#xA;OR&#xA;    ([Customer order block (sales area)] = 'Overall block' &#xA;            AND&#xA;    c.[Customer classification] = 'Hold-legal')&#xA;-- AND&#xA;--     pr.[SGRP_CODE] = 106&#xA;GROUP BY&#xA;    c.[Rg]&#xA;    ,c.[SDst]&#xA;    ,c.[SOff.]&#xA;    ,c.[Rout]&#xA;    ,si.[Customer]&#xA;    ,si.[Customer Name]&#xA;    ,si.[RGB]&#xA;    ,si.[NRB]&#xA;    ,si.[Contract]&#xA;    ,sc.[Customer1]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sell_in_Contracts Data from Excel using Power Query"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E62CB3C4-866B-46C6-962D-B0AC1204839E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sell_in_Contracts Data from Excel using Power Query"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[calc].[sell_in_contracts]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.budget]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer]"
+                      cachedDataType="i8"
+                      cachedName="Customer"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer Name]"
+                      cachedDataType="nText"
+                      cachedName="Customer Name"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer Name]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Customer Name]" />
+                    <inputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RGB]"
+                      cachedDataType="r8"
+                      cachedName="RGB"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RGB]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[RGB]" />
+                    <inputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NRB]"
+                      cachedDataType="r8"
+                      cachedName="NRB"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NRB]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[NRB]" />
+                    <inputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Contract]"
+                      cachedDataType="i8"
+                      cachedName="Contract"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Contract]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
+                      dataType="i8"
+                      name="Customer" />
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer Name]"
+                      dataType="nText"
+                      name="Customer Name" />
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RGB]"
+                      dataType="r8"
+                      name="RGB" />
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NRB]"
+                      dataType="r8"
+                      name="NRB" />
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Contract]"
+                      dataType="i8"
+                      name="Contract" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Power Query Source"
+              name="Power Query Source">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode of the query."
+                  name="QueryMode"
+                  typeConverter="Microsoft.SqlServer.IntegrationServices.PowerQuery.TypeConverters.QueryModeTypeConverter">0</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the M query to be executed."
+                  name="SingleQueryVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The single M query to be executed."
+                  name="SingleQueryText"
+                  state="cdata"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"><![CDATA[let
+    Source = Folder.Files("D:\Budget\Selli-In Data"),
+    #"Filtered Rows" = Table.SelectRows(Source, each Text.Contains([Name], "All Customers- Target 2021")),
+    #"Removed Other Columns" = Table.SelectColumns(#"Filtered Rows",{"Content"}),
+    #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "getData", each Excel.Workbook([Content])),
+    #"Expanded getData" = Table.ExpandTableColumn(#"Added Custom", "getData", {"Name", "Data", "Item", "Kind", "Hidden"}, {"Name", "Data", "Item", "Kind", "Hidden"}),
+    #"Filtered Rows20" = Table.SelectRows(#"Expanded getData", each ([Kind] = "Sheet") and ([Item] <> "Summary By Depot " and [Item] <> "Summary BY Region" and [Item] <> "Summery (2)")),
+    #"Removed Other Columns1" = Table.SelectColumns(#"Filtered Rows20",{"Data"}),
+    #"Expanded Data" = Table.ExpandTableColumn(#"Removed Other Columns1", "Data", {"Column1", "Column2", "Column3", "Column4", "Column5", "Column6", "Column7", "Column8", "Column9", "Column10", "Column11", "Column12", "Column13", "Column14"}, {"Column1", "Column2", "Column3", "Column4", "Column5", "Column6", "Column7", "Column8", "Column9", "Column10", "Column11", "Column12", "Column13", "Column14"}),
+    #"Removed Top Rows" = Table.Skip(#"Expanded Data",1),
+    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"SAP Code", type text}}),
+    #"Filtered Rows1" = Table.SelectRows(#"Changed Type1", each not Text.Contains([SAP Code], "ت") and ([SAP Code] <> "SAP Code")
+),
+    #"Removed Other Columns2" = Table.SelectColumns(#"Filtered Rows1",{"SAP Code", "Customer Name", "زجاج ", "عبوات", "اجمالى 2021"}),
+    #"Trimmed Text" = Table.TransformColumns(Table.TransformColumnTypes(#"Removed Other Columns2", {{"SAP Code", type text}}, "en-US"),{{"SAP Code", Text.Trim, type text}}),
+    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"SAP Code", Text.Clean, type text}}),
+    #"Changed Type" = Table.TransformColumnTypes(#"Cleaned Text",{{"SAP Code", Int64.Type}, {"Customer Name", type text}, {"زجاج ", Int64.Type}, {"عبوات", Int64.Type}, {"اجمالى 2021", Int64.Type}}),
+    #"Replaced Value" = Table.ReplaceValue(#"Changed Type",null,0,Replacer.ReplaceValue,{"زجاج ", "عبوات"}),
+    #"Renamed Columns" = Table.RenameColumns(#"Replaced Value",{{"زجاج ", "RGB"}, {"عبوات", "NRB"}, {"اجمالى 2021", "Contract"}, {"SAP Code", "Customer"}})
+in
+    #"Renamed Columns"]]></property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.PowerQuerySource</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Connections[Folder Connection]"
+                  connectionManagerID="Package.ConnectionManagers[Power Query Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Power Query Connection Manager]"
+                  description="Folder/d:\budget\selli-in data"
+                  name="Folder Connection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Customer]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[Customer]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Customer]"
+                      name="Customer" />
+                    <outputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Customer Name]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[Customer Name]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Customer Name]"
+                      name="Customer Name" />
+                    <outputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[RGB]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[RGB]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[RGB]"
+                      name="RGB" />
+                    <outputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[NRB]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[NRB]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[NRB]"
+                      name="NRB" />
+                    <outputColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Contract]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[Contract]"
+                      lineageId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].Columns[Contract]"
+                      name="Contract" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[Customer]"
+                      dataType="i8"
+                      name="Customer" />
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[Customer Name]"
+                      dataType="nText"
+                      name="Customer Name" />
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[RGB]"
+                      dataType="r8"
+                      name="RGB" />
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[NRB]"
+                      dataType="r8"
+                      name="NRB" />
+                    <externalMetadataColumn
+                      refId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output].ExternalColumns[Contract]"
+                      dataType="i8"
+                      name="Contract" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Sell_in_Contracts Data from Excel using Power Query.Paths[Output]"
+              endId="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Output"
+              startId="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source.Outputs[Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\special_customers Data from Excel"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{37164534-6486-4288-8800-3FB9E2086A08}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="special_customers Data from Excel"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\special_customers Data from Excel\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\special_customers Data from Excel\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Customer]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer]"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Customer]"
+                      name="Customer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Name 1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name 1]"
+                      length="255"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Name 1]"
+                      name="Name 1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Customer1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer1]"
+                      length="255"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Customer1]"
+                      name="Customer1"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer]"
+                      dataType="r8"
+                      name="Customer" />
+                    <externalMetadataColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Name 1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name 1" />
+                    <externalMetadataColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].ExternalColumns[Customer1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customer1" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Customer]"
+                      dataType="r8"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Customer]"
+                      name="Customer" />
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Name 1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Name 1]"
+                      name="Name 1" />
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Customer1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[Customer1]"
+                      name="Customer1" />
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\special_customers Data from Excel\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[calc].[special_customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\special_customers Data from Excel\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.budget]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer]"
+                      cachedDataType="r8"
+                      cachedName="Customer"
+                      externalMetadataColumnId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name 1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Name 1"
+                      externalMetadataColumnId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name 1]"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Name 1]" />
+                    <inputColumn
+                      refId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Customer1"
+                      externalMetadataColumnId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer1]"
+                      lineageId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output].Columns[Customer1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
+                      dataType="r8"
+                      name="Customer" />
+                    <externalMetadataColumn
+                      refId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name 1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Name 1" />
+                    <externalMetadataColumn
+                      refId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Customer1" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\special_customers Data from Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\special_customers Data from Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\special_customers Data from Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\special_customers Data from Excel\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\special_customers Data from Excel.Paths[Excel Source Output]"
+              endId="Package\special_customers Data from Excel\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\special_customers Data from Excel\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update New Contract"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{244F45AD-529B-432F-8FE2-19E03251C09B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update New Contract"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="UPDATE&#xA;    [calc].[sell_in_cutsomers]&#xA;SET &#xA;    [NewContract] = CASE WHEN ([Contract] &gt; [Prior] OR [SpecialCustomer] IS NOT NULL OR [Prior] IS NULL) THEN [Contract]&#xA;                        ELSE [Prior] * 1.1 &#xA;                    END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update NewRGB and NewNRB"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A61F3721-CB66-4F31-AD06-84CAB52D8586}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update NewRGB and NewNRB"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="UPDATE&#xA;    [calc].[sell_in_cutsomers]&#xA;SET &#xA;    [NewRGB] = ([RGB] / [Contract]) * [NewContract],&#xA;    [NewNRB] = ([NRB] / [Contract]) * [NewContract]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Prior"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D378A05A-25E9-4C31-ADBD-24F03C98622F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Prior"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6A2BD34F-50F9-4230-9DBE-261DF23FEB7A}"
+          SQLTask:SqlStatementSource="&#xA;UPDATE &#xA;    si&#xA;SET&#xA;    si.[Prior] = pr.[Prior]&#xA;FROM&#xA;    [calc].[sell_in_cutsomers] AS si&#xA;LEFT JOIN&#xA;    (SELECT &#xA;        [RECORD_UID],&#xA;        SUM([PRIOR_PHY]) AS [Prior]&#xA;    FROM &#xA;        [COKE_BI].[dbo].[PRIOR]&#xA;    WHERE &#xA;        [SGRP_CODE] = 106&#xA;    GROUP BY &#xA;        [RECORD_UID]) AS pr&#xA;ON&#xA;    CONCAT(si.[Customer], ' ::: 10 ::: 51') = pr.[RECORD_UID]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{EA872182-52D4-4E08-BCC6-FA2F4F2C1F59}"
+      DTS:From="Package\Create or Drop calc sell_in_contracts"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Sell_in_Contracts Data from Excel using Power Query" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DF4BD871-0879-4B1F-8F73-10579EBC2866}"
+      DTS:From="Package\Drop and Create calc special_customers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\special_customers Data from Excel" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{19111068-3EC9-4085-A291-8198BA2C0487}"
+      DTS:From="Package\Sell_in_Contracts Data from Excel using Power Query"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Drop and Create calc sell_in_cutsomers" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{4B7EAEDF-EB6E-4CCF-ADF3-6EA1E0BFB807}"
+      DTS:From="Package\special_customers Data from Excel"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Drop and Create calc sell_in_cutsomers" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{CA8AF3A3-B77E-47D1-81F8-06B1A866F334}"
+      DTS:From="Package\Drop and Create calc sell_in_cutsomers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Insert Data from dim Customers and sell_in_contracts" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{5C540D73-AA44-44CF-A6B2-F93BFA8590FA}"
+      DTS:From="Package\Insert Data from dim Customers and sell_in_contracts"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Update Prior" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{11313875-8000-45C9-BD21-BA9486E63784}"
+      DTS:From="Package\Update Prior"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Update New Contract" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{3FA5D588-DE4E-4884-9D79-C785849D87D7}"
+      DTS:From="Package\Update New Contract"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Update NewRGB and NewNRB" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="251.2,41.6"
+          Id="Package\Create or Drop calc sell_in_contracts"
+          TopLeft="22.8571432463978,38.2352946538826" />
+        <NodeLayout
+          Size="329.6,41.6"
+          Id="Package\Sell_in_Contracts Data from Excel using Power Query"
+          TopLeft="19.2857146141486,130.764707716279" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="148.457143246398,79.8352946538826">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.6285713677508,50.9294130623961"
+              Start="0,0"
+              End="35.6285713677508,43.4294130623961">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4647065311981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4647065311981"
+                    Point2="0,25.4647065311981"
+                    Point3="4,25.4647065311981" />
+                  <mssgle:LineSegment
+                    End="31.6285713677508,25.4647065311981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.6285713677508,25.4647065311981"
+                    Point2="35.6285713677508,25.4647065311981"
+                    Point3="35.6285713677508,29.4647065311981" />
+                  <mssgle:LineSegment
+                    End="35.6285713677508,43.4294130623961" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="266.4,41.6"
+          Id="Package\Drop and Create calc special_customers"
+          TopLeft="460.000007833754,35.176471081572" />
+        <NodeLayout
+          Size="242.4,41.6"
+          Id="Package\special_customers Data from Excel"
+          TopLeft="462.142865013103,129.235295930123" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="593.200007833753,76.776471081572">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.8571428206501,52.4588248485512"
+              Start="0,0"
+              End="-9.8571428206501,44.9588248485512">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2294124242756" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2294124242756"
+                    Point2="0,26.2294124242756"
+                    Point3="-4,26.2294124242756" />
+                  <mssgle:LineSegment
+                    End="-5.8571428206501,26.2294124242756" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.8571428206501,26.2294124242756"
+                    Point2="-9.8571428206501,26.2294124242756"
+                    Point3="-9.8571428206501,30.2294124242756" />
+                  <mssgle:LineSegment
+                    End="-9.8571428206501,44.9588248485512" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="264,41.6"
+          Id="Package\Drop and Create calc sell_in_cutsomers"
+          TopLeft="230.000003916877,234.000003281762" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="184.085714614149,172.364707716279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135.247622636061,61.6352955654829"
+              Start="0,0"
+              End="135.247622636061,54.1352955654829">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.758399162547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.758399162547"
+                    Point2="0,36.758399162547"
+                    Point3="4,36.758399162547" />
+                  <mssgle:LineSegment
+                    End="131.247622636061,36.758399162547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="131.247622636061,36.758399162547"
+                    Point2="135.247622636061,36.758399162547"
+                    Point3="135.247622636061,40.758399162547" />
+                  <mssgle:LineSegment
+                    End="135.247622636061,54.1352955654829" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="583.342865013103,170.835295930123">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-178.67619442956,63.1647073516384"
+              Start="0,0"
+              End="-178.67619442956,55.6647073516384">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.6705182398325" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.6705182398325"
+                    Point2="0,37.6705182398325"
+                    Point3="-4,37.6705182398325" />
+                  <mssgle:LineSegment
+                    End="-174.67619442956,37.6705182398325" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-174.67619442956,37.6705182398325"
+                    Point2="-178.67619442956,37.6705182398325"
+                    Point3="-178.67619442956,41.6705182398325" />
+                  <mssgle:LineSegment
+                    End="-178.67619442956,55.6647073516384" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="332.8,41.6"
+          Id="Package\Insert Data from dim Customers and sell_in_contracts"
+          TopLeft="188.571431782781,302.058827765673" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="358.485717849829,275.600003281762">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.4588244839111"
+              Start="0,0"
+              End="0,18.9588244839111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.9588244839111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Update Prior"
+          TopLeft="275.000004683222,373.1647106334" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="354.971431782781,343.658827765673">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.5714270995586,29.5058828677272"
+              Start="0,0"
+              End="-11.5714270995586,22.0058828677272">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.7529414338636" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.7529414338636"
+                    Point2="0,14.7529414338636"
+                    Point3="-4,14.7529414338636" />
+                  <mssgle:LineSegment
+                    End="-7.5714270995586,14.7529414338636" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.5714270995586,14.7529414338636"
+                    Point2="-11.5714270995586,14.7529414338636"
+                    Point3="-11.5714270995586,18.7529414338636" />
+                  <mssgle:LineSegment
+                    End="-11.5714270995586,22.0058828677272" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Update New Contract"
+          TopLeft="250.000004257475,441.56471026876" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="341.500004470349,414.7647106334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.7999996353598"
+              Start="0,0"
+              End="0,19.2999996353598">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.2999996353598" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Update NewRGB and NewNRB"
+          TopLeft="247.857147078125,514.623534205711" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="339.600004257475,483.16471026876">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.6571428206503,31.458823936951"
+              Start="0,0"
+              End="18.6571428206503,23.958823936951">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.7294119684755" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.7294119684755"
+                    Point2="0,15.7294119684755"
+                    Point3="4,15.7294119684755" />
+                  <mssgle:LineSegment
+                    End="14.6571428206503,15.7294119684755" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.6571428206503,15.7294119684755"
+                    Point2="18.6571428206503,15.7294119684755"
+                    Point3="18.6571428206503,19.7294119684755" />
+                  <mssgle:LineSegment
+                    End="18.6571428206503,23.958823936951" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sell_in_Contracts Data from Excel using Power Query">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination"
+          TopLeft="115.000001958438,111.647060389337" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Sell_in_Contracts Data from Excel using Power Query\Power Query Source"
+          TopLeft="110.000001873289,26.7647062577178" />
+        <EdgeLayout
+          Id="Package\Sell_in_Contracts Data from Excel using Power Query.Paths[Output]"
+          TopLeft="198.700001915863,68.3647062577178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.2823541316196"
+              Start="0,0"
+              End="0,35.7823541316196">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.7823541316196" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sell_in_Contracts Data from Excel using Power Query\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\special_customers Data from Excel">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\special_customers Data from Excel\Excel Source"
+          TopLeft="286,56" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\special_customers Data from Excel\OLE DB Destination"
+          TopLeft="289,156" />
+        <EdgeLayout
+          Id="Package\special_customers Data from Excel.Paths[Excel Source Output]"
+          TopLeft="355.2,97.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19,58.3999999999999"
+              Start="0,0"
+              End="19,50.8999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.2"
+                    Point2="0,29.2"
+                    Point3="4,29.2" />
+                  <mssgle:LineSegment
+                    End="15,29.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15,29.2"
+                    Point2="19,29.2"
+                    Point3="19,33.2" />
+                  <mssgle:LineSegment
+                    End="19,50.8999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\special_customers Data from Excel\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\special_customers Data from Excel\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
